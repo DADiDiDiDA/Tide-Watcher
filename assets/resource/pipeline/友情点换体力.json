@@ -3,13 +3,63 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -2370,
-                "y": 101,
-                "zoom": 0.86
+                "x": -2367,
+                "y": 275,
+                "zoom": 0.75
             },
             "filename": "友情点换体力",
             "version": "v1.5.2"
         }
+    },
+    "开始返回上一级换体力": {
+        "next": [
+            "返回上一级换体力"
+        ],
+        "on_error": [
+            "检查是否在主界面换体力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3683,
+                "y": -181
+            }
+        },
+        "post_delay": 2000
+    },
+    "返回上一级换体力结束": {
+        "next": [
+            "开始返回上一级换体力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4421,
+                "y": -127
+            }
+        },
+        "post_delay": 2000
+    },
+    "检查是否在主界面换体力": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    963,
+                    586,
+                    314,
+                    105
+                ],
+                "template": [
+                    "战役图标.png"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 4333,
+                "y": 141
+            }
+        },
+        "post_delay": 2000
     },
     "点击增加体力图标": {
         "recognition": {
@@ -37,7 +87,8 @@
                 "x": 2535,
                 "y": 205
             }
-        }
+        },
+        "post_delay": 2000
     },
     "进入更换界面": {
         "recognition": {
@@ -65,7 +116,8 @@
                 "x": 2803,
                 "y": 48
             }
-        }
+        },
+        "post_delay": 2000
     },
     "换体力": {
         "recognition": {
@@ -86,14 +138,27 @@
             "type": "Click"
         },
         "next": [
-            "返回上一级换体力"
+            "开始返回上一级换体力"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3358,
-                "y": -17
+                "x": 3423,
+                "y": -181
             }
-        }
+        },
+        "post_delay": 2000
+    },
+    "换体力开始": {
+        "next": [
+            "换体力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3096,
+                "y": -53
+            }
+        },
+        "post_delay": 2000
     },
     "返回上一级换体力": {
         "recognition": {
@@ -114,43 +179,14 @@
             "type": "Click"
         },
         "next": [
-            "返回主菜单换体力"
+            "返回上一级换体力结束"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3623,
-                "y": 5
-            }
-        }
-    },
-    "返回主菜单换体力": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "红色X号.png"
-                ]
+                "x": 4108,
+                "y": -337
             }
         },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 3839,
-                "y": 226
-            }
-        }
-    },
-    "换体力开始": {
-        "next": [
-            "换体力"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3096,
-                "y": -53
-            }
-        }
+        "post_delay": 2000
     }
 }

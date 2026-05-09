@@ -1,71 +1,86 @@
 {
-    "$__mpe_config_领取任务奖励": {
+    "$__mpe_config_公会奖励领取": {
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -4036,
-                "y": -93,
-                "zoom": 0.99
+                "x": -1048,
+                "y": 205,
+                "zoom": 0.75
             },
-            "filename": "领取任务奖励",
+            "filename": "公会奖励领取",
             "version": "v1.5.2"
         }
     },
-    "进入任务界面开始": {
+    "开始公会奖励领取": {
         "next": [
-            "进入任务界面"
+            "进入公会"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3861,
-                "y": 396
+                "x": 1095,
+                "y": 62
             }
         },
         "post_delay": 2000
     },
-    "进入任务界面": {
+    "进入公会": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    690,
-                    653,
-                    45,
-                    28
+                    177,
+                    593,
+                    769,
+                    71
                 ],
-                "expected": [
-                    "任务"
-                ]
+                "template": [
+                    "公会图标.png"
+                ],
+                "green_mask": true
             }
         },
         "action": {
             "type": "Click"
         },
         "next": [
-            "有没有待领取奖励开始"
+            "开始检查是否有公会奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4121,
-                "y": 396
+                "x": 1364,
+                "y": 49
             }
         },
         "post_delay": 2000
     },
-    "检查有没有待领取": {
+    "开始检查是否有公会奖励": {
+        "next": [
+            "检查是否有公会奖励"
+        ],
+        "on_error": [
+            "公会无奖励；退出"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1624,
+                "y": 49
+            }
+        },
+        "post_delay": 2000
+    },
+    "检查是否有公会奖励": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    234,
-                    84,
-                    28,
-                    350
+                    267,
+                    269,
+                    37,
+                    94
                 ],
                 "template": [
                     "待领取图标.png"
                 ],
-                "green_mask": true,
                 "threshold": [
                     0.6
                 ]
@@ -75,40 +90,69 @@
             "type": "Click"
         },
         "next": [
-            "领取奖励"
+            "开始领取公会奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4745,
-                "y": 19
+                "x": 1861,
+                "y": -183
             }
         },
         "post_delay": 2000
     },
-    "有没有待领取奖励开始": {
+    "开始领取公会奖励": {
         "next": [
-            "检查有没有待领取"
+            "领取公会奖励"
         ],
         "on_error": [
-            "无待领取返回主菜单"
+            "公会无奖励；退出"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4493,
-                "y": 385
+                "x": 2174,
+                "y": -191
             }
         },
         "post_delay": 2000
     },
-    "无待领取返回主菜单": {
+    "领取公会奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1080,
+                    241,
+                    139,
+                    430
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认领取公会奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2515,
+                "y": 1
+            }
+        },
+        "post_delay": 2000
+    },
+    "公会无奖励；退出": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    4,
-                    5,
-                    84,
-                    50
+                    3,
+                    3,
+                    107,
+                    53
                 ],
                 "template": [
                     "矮人超市退出.png"
@@ -120,50 +164,21 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 4862,
-                "y": 561
+                "x": 2354,
+                "y": 277
             }
         },
         "post_delay": 2000
     },
-    "领取奖励": {
+    "确认领取公会奖励": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    950,
-                    626,
-                    273,
-                    57
-                ],
-                "expected": [
-                    "领取"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "确认任务奖励"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 5003,
-                "y": 26
-            }
-        },
-        "post_delay": 2000
-    },
-    "确认任务奖励": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    583,
-                    664,
-                    123,
-                    44
+                    581,
+                    622,
+                    120,
+                    97
                 ],
                 "expected": [
                     "关闭"
@@ -174,12 +189,12 @@
             "type": "Click"
         },
         "next": [
-            "有没有待领取奖励开始"
+            "开始领取公会奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5264,
-                "y": 35
+                "x": 2775,
+                "y": 1
             }
         },
         "post_delay": 2000

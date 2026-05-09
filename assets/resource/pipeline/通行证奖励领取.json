@@ -1,0 +1,657 @@
+{
+    "$__mpe_config_通行证奖励领取": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -2972,
+                "y": -143,
+                "zoom": 0.57
+            },
+            "filename": "通行证奖励领取",
+            "version": "v1.5.2"
+        }
+    },
+    "开始进入通行证": {
+        "next": [
+            "进入通行证"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4719,
+                "y": 56
+            }
+        },
+        "post_delay": 2000
+    },
+    "进入通行证": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    970,
+                    224,
+                    291,
+                    52
+                ],
+                "expected": [
+                    "通行证"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "开始进入金龙通行证"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4979,
+                "y": 56
+            }
+        },
+        "post_delay": 2000
+    },
+    "开始进入金龙通行证": {
+        "next": [
+            "进入金龙通行证"
+        ],
+        "on_error": [
+            "所有通行证领取完成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5239,
+                "y": 56
+            }
+        },
+        "post_delay": 2000
+    },
+    "进入金龙通行证": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    65,
+                    97,
+                    157,
+                    159
+                ],
+                "expected": [
+                    "金龙"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入金龙通行证日任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5523,
+                "y": -57
+            }
+        },
+        "post_delay": 2000
+    },
+    "进入金龙通行证日任务": {
+        "next": [
+            "点击金龙通行证有奖励的任务"
+        ],
+        "on_error": [
+            "开始检查有没有金龙通行证奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5812,
+                "y": 40
+            }
+        },
+        "post_delay": 2000
+    },
+    "点击金龙通行证有奖励的任务": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    656,
+                    180,
+                    415,
+                    28
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "金龙通行证日任务领取"
+        ],
+        "on_error": [
+            "开始检查有没有金龙通行证奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5966,
+                "y": -478
+            }
+        },
+        "post_delay": 2000
+    },
+    "金龙通行证日任务领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    887,
+                    623,
+                    269,
+                    52
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始活跃度领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6389,
+                "y": -375
+            }
+        },
+        "post_delay": 2000
+    },
+    "金龙通行证日任务活跃度领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    585,
+                    623,
+                    113,
+                    95
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "检测活跃度领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6701,
+                "y": -471
+            }
+        },
+        "post_delay": 2000
+    },
+    "开始活跃度领取": {
+        "next": [
+            "金龙通行证日任务活跃度领取"
+        ],
+        "on_error": [
+            "点击金龙通行证有奖励的任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6286,
+                "y": -570
+            }
+        },
+        "post_delay": 2000
+    },
+    "检测活跃度领取": {
+        "next": [
+            "开始活跃度领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6831,
+                "y": -628
+            }
+        },
+        "post_delay": 2000
+    },
+    "点击精灵通行证有奖励的任务": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    656,
+                    180,
+                    415,
+                    28
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "精灵通行证日任务领取"
+        ],
+        "on_error": [
+            "开始检查有没有精灵通行证奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6093,
+                "y": 209
+            }
+        },
+        "post_delay": 2000
+    },
+    "精灵通行证日任务领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    887,
+                    623,
+                    269,
+                    52
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始精灵通行证活跃度领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6395,
+                "y": 418
+            }
+        },
+        "post_delay": 2000
+    },
+    "精灵通行证日任务活跃度领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    585,
+                    623,
+                    113,
+                    95
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "检测精灵活跃度领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6839,
+                "y": 336
+            }
+        },
+        "post_delay": 2000
+    },
+    "开始精灵通行证活跃度领取": {
+        "next": [
+            "精灵通行证日任务活跃度领取"
+        ],
+        "on_error": [
+            "点击精灵通行证有奖励的任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6568,
+                "y": 213
+            }
+        },
+        "post_delay": 2000
+    },
+    "检测精灵活跃度领取": {
+        "next": [
+            "开始精灵通行证活跃度领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7137,
+                "y": 195
+            }
+        },
+        "post_delay": 2000
+    },
+    "开始进入精灵通行证": {
+        "next": [
+            "进入精灵通行证"
+        ],
+        "on_error": [
+            "所有通行证领取完成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5188,
+                "y": 394
+            }
+        },
+        "post_delay": 2000
+    },
+    "进入精灵通行证": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    72,
+                    94,
+                    144,
+                    155
+                ],
+                "expected": [
+                    "精灵"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始领取精灵通行证"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5489,
+                "y": 315
+            }
+        },
+        "post_delay": 2000
+    },
+    "开始领取精灵通行证": {
+        "next": [
+            "点击精灵通行证有奖励的任务"
+        ],
+        "on_error": [
+            "开始检查有没有精灵通行证奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5766,
+                "y": 338
+            }
+        },
+        "post_delay": 2000
+    },
+    "所有通行证领取完成": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    4,
+                    78,
+                    49
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 6077,
+                "y": 1036
+            }
+        },
+        "post_delay": 2000
+    },
+    "开始检查有没有金龙通行证奖励": {
+        "next": [
+            "有没有金龙通行证奖励"
+        ],
+        "on_error": [
+            "开始进入精灵通行证"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6160,
+                "y": 2
+            }
+        },
+        "post_delay": 2000
+    },
+    "有没有金龙通行证奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    414,
+                    176,
+                    177,
+                    30
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "一键领取金龙通行证奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6474,
+                "y": -158
+            }
+        },
+        "post_delay": 2000
+    },
+    "一键领取金龙通行证奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    483,
+                    644,
+                    233,
+                    49
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认收下金龙通行证奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6740,
+                "y": -146
+            }
+        },
+        "post_delay": 2000
+    },
+    "确认收下金龙通行证奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    580,
+                    615,
+                    123,
+                    104
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始检查有没有金龙通行证奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7077,
+                "y": -239
+            }
+        },
+        "post_delay": 2000
+    },
+    "有没有精灵通行证奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    414,
+                    176,
+                    177,
+                    30
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "一键领取精灵通行证奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6448,
+                "y": 720
+            }
+        },
+        "post_delay": 2000
+    },
+    "一键领取精灵通行证奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    483,
+                    644,
+                    233,
+                    49
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认收下精灵通行证奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6804,
+                "y": 755
+            }
+        },
+        "post_delay": 2000
+    },
+    "确认收下精灵通行证奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    580,
+                    615,
+                    123,
+                    104
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始检查有没有精灵通行证奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7168,
+                "y": 769
+            }
+        },
+        "post_delay": 2000
+    },
+    "开始检查有没有精灵通行证奖励": {
+        "next": [
+            "有没有精灵通行证奖励"
+        ],
+        "on_error": [
+            "所有通行证领取完成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6108,
+                "y": 768
+            }
+        },
+        "post_delay": 2000
+    }
+}

@@ -1,0 +1,188 @@
+{
+    "$__mpe_config_在线奖励领取": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -2312,
+                "y": 91,
+                "zoom": 0.86
+            },
+            "filename": "在线奖励领取",
+            "version": "v1.5.2"
+        }
+    },
+    "开始在线奖励领取": {
+        "next": [
+            "在线奖励领取"
+        ],
+        "on_error": [
+            "在线奖励领取结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3135,
+                "y": 160
+            }
+        },
+        "post_delay": 2000
+    },
+    "在线奖励领取": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    630,
+                    151,
+                    157,
+                    108
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领取在线奖励第一次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3434,
+                "y": -73
+            }
+        },
+        "post_delay": 2000
+    },
+    "领取在线奖励第一次": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1029,
+                    358,
+                    45,
+                    45
+                ]
+            }
+        },
+        "next": [
+            "领取在线奖励第二次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3735,
+                "y": -11
+            }
+        },
+        "post_delay": 2000
+    },
+    "退出在线奖励菜单": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    578,
+                    597,
+                    125,
+                    116
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 4839,
+                "y": 127
+            }
+        },
+        "post_delay": 2000
+    },
+    "领取在线奖励第二次": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    894,
+                    366,
+                    39,
+                    36
+                ]
+            }
+        },
+        "next": [
+            "领取在线奖励第三次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4031,
+                "y": -18
+            }
+        },
+        "post_delay": 2000
+    },
+    "领取在线奖励第三次": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    761,
+                    372,
+                    42,
+                    32
+                ]
+            }
+        },
+        "next": [
+            "领取在线奖励第四次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4319,
+                "y": 16
+            }
+        },
+        "post_delay": 2000
+    },
+    "领取在线奖励第四次": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1029,
+                    364,
+                    44,
+                    37
+                ]
+            }
+        },
+        "next": [
+            "退出在线奖励菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4600,
+                "y": -2
+            }
+        },
+        "post_delay": 2000
+    },
+    "在线奖励领取结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4314,
+                "y": 325
+            }
+        },
+        "post_delay": 2000
+    }
+}

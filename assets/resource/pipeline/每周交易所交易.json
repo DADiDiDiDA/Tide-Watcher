@@ -1,0 +1,135 @@
+{
+    "$__mpe_config_每周交易所交易": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -3252,
+                "y": 239,
+                "zoom": 0.75
+            },
+            "filename": "每周交易所交易",
+            "version": "v1.5.2"
+        }
+    },
+    "每周交易所交易开始": {
+        "next": [
+            "每周交易所交易"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4661,
+                "y": 69
+            }
+        },
+        "post_delay": 2000
+    },
+    "每周交易所交易": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    596,
+                    52,
+                    121,
+                    157
+                ],
+                "template": [
+                    "资源已满.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "启动交易开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4968,
+                "y": -140
+            }
+        },
+        "post_delay": 2000
+    },
+    "启动交易开始": {
+        "next": [
+            "有没有剩余次数"
+        ],
+        "on_error": [
+            "返回主界面交易所"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5283,
+                "y": -13
+            }
+        },
+        "post_delay": 2000
+    },
+    "领取交易所奖励": {
+        "next": [
+            "启动交易开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6100,
+                "y": -120
+            }
+        },
+        "post_delay": 2000
+    },
+    "返回主界面交易所": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 5597,
+                "y": 155
+            }
+        },
+        "post_delay": 2000
+    },
+    "有没有剩余次数": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1109,
+                    151,
+                    131,
+                    479
+                ],
+                "expected": ""
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领取交易所奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5652,
+                "y": -220
+            }
+        },
+        "post_delay": 2000
+    }
+}

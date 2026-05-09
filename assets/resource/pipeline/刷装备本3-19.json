@@ -29,7 +29,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "进入装备本"
         ],
@@ -58,7 +58,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "装备副本三"
         ],
@@ -84,7 +84,7 @@
                 ]
             }
         },
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "进入副本三"
         ],
@@ -107,7 +107,7 @@
                 ]
             }
         },
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "选中关卡19"
         ],
@@ -136,7 +136,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "进入自动战斗配置"
         ],
@@ -165,7 +165,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "检测后台战斗是不是开着的"
         ],
@@ -194,7 +194,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 500,
+        "post_delay": 2000,
         "next": [
             "开始自动战斗"
         ],
@@ -252,7 +252,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 500,
+        "post_delay": 2000,
         "next": [
             "返回刷装备副本选择"
         ],
@@ -275,7 +275,8 @@
                 "x": 1807,
                 "y": -21
             }
-        }
+        },
+        "post_delay": 2000
     },
     "后台战斗是开启的吗": {
         "recognition": {
@@ -306,7 +307,8 @@
                 "x": 2054,
                 "y": -219
             }
-        }
+        },
+        "post_delay": 2000
     },
     "不是后台战斗退出": {
         "recognition": {
@@ -418,6 +420,7 @@
                 "x": 3740,
                 "y": 326
             }
-        }
+        },
+        "post_delay": 2000
     }
 }
