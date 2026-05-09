@@ -1,0 +1,165 @@
+{
+    "$__mpe_config_休伯利安": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -133,
+                "y": 280,
+                "zoom": 0.65
+            },
+            "filename": "休伯利安",
+            "version": "v1.5.2"
+        }
+    },
+    "点击休伯利安": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    874,
+                    338,
+                    65,
+                    68
+                ],
+                "template": [
+                    "休伯利安图片.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "是否有奖励开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 326,
+                "y": -130
+            }
+        }
+    },
+    "检测是否有奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    576,
+                    568,
+                    128,
+                    147
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "无奖励_返回主界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 961,
+                "y": -350
+            }
+        }
+    },
+    "无奖励_返回主界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    4,
+                    2,
+                    113,
+                    53
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "休伯利安任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1139,
+                "y": -59
+            }
+        }
+    },
+    "休伯利安启动": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    180,
+                    560,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        779,
+                        283,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 1500,
+        "next": [
+            "点击休伯利安开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -228,
+                "y": -68
+            }
+        }
+    },
+    "点击休伯利安开始": {
+        "next": [
+            "点击休伯利安",
+            "休伯利安任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 70,
+                "y": 144
+            }
+        }
+    },
+    "休伯利安任务结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1459,
+                "y": 196
+            }
+        }
+    },
+    "是否有奖励开始": {
+        "next": [
+            "检测是否有奖励"
+        ],
+        "on_error": [
+            "无奖励_返回主界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 590,
+                "y": -205
+            }
+        }
+    }
+}

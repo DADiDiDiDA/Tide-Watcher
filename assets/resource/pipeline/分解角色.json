@@ -1,0 +1,244 @@
+{
+    "$__mpe_config_分解角色": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -3422,
+                "y": 3,
+                "zoom": 0.75
+            },
+            "filename": "分解角色",
+            "version": "v1.5.2"
+        }
+    },
+    "新建节点153732": {
+        "next": [
+            "选择一星二星三星角色",
+            "开始遣散角色"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4468,
+                "y": 198
+            }
+        }
+    },
+    "开始遣散角色": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    957,
+                    610,
+                    149,
+                    40
+                ],
+                "expected": [
+                    "散"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认遣返角色节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4869,
+                "y": 407
+            }
+        }
+    },
+    "确认遣散角色": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    651,
+                    486,
+                    184,
+                    66
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领取遣散奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5351,
+                "y": 69
+            }
+        }
+    },
+    "领取遣散奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    575,
+                    664,
+                    139,
+                    52
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回到主菜单分解角色"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5658,
+                "y": 121
+            }
+        }
+    },
+    "返回到主菜单分解角色": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    2,
+                    3,
+                    74,
+                    48
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 5828,
+                "y": 393
+            }
+        }
+    },
+    "分解角色开始节点": {
+        "next": [
+            "进入角色界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3621,
+                "y": 372
+            }
+        }
+    },
+    "进入角色界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    857,
+                    585,
+                    97,
+                    99
+                ],
+                "template": [
+                    "英雄图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入分解界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3948,
+                "y": 337
+            }
+        }
+    },
+    "进入分解界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    311,
+                    262,
+                    75,
+                    446
+                ],
+                "template": [
+                    "英雄分解图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "新建节点153732"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4232,
+                "y": 311
+            }
+        }
+    },
+    "选择一星二星三星角色": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    310,
+                    520,
+                    506,
+                    53
+                ],
+                "template": [
+                    "选择框.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "新建节点153732"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4875,
+                "y": -58
+            }
+        }
+    },
+    "确认遣返角色节点": {
+        "next": [
+            "确认遣散角色"
+        ],
+        "on_error": [
+            "返回到主菜单分解角色"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5048,
+                "y": 204
+            }
+        }
+    }
+}

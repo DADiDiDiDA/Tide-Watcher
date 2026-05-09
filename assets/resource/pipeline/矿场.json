@@ -1,0 +1,114 @@
+{
+    "$__mpe_config_矿场": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": 25,
+                "y": 134,
+                "zoom": 0.99
+            },
+            "filename": "矿场",
+            "version": "v1.5.2"
+        }
+    },
+    "点击矿场": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    924,
+                    204,
+                    147,
+                    149
+                ],
+                "template": [
+                    "正常矿场.png",
+                    "资源已满.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "领取矿场"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 12
+            }
+        }
+    },
+    "领取矿场": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 322,
+                "y": 42
+            }
+        }
+    },
+    "确认奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    585,
+                    670,
+                    114,
+                    35
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "next": [
+            "返回主界面_矿场"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 632,
+                "y": 42
+            }
+        }
+    },
+    "返回主界面_矿场": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 942,
+                "y": 42
+            }
+        }
+    }
+}

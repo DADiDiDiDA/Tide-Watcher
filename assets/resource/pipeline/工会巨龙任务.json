@@ -1,0 +1,398 @@
+{
+    "$__mpe_config_工会巨龙任务": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": 8,
+                "y": 148,
+                "zoom": 0.49
+            },
+            "filename": "工会巨龙任务",
+            "version": "v1.5.2"
+        }
+    },
+    "开始自动挑战巨龙": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    911,
+                    586,
+                    149,
+                    61
+                ],
+                "expected": [
+                    "自动战斗"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "挑战开始等待挑战结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3212,
+                "y": 12
+            }
+        }
+    },
+    "等待巨龙自动战斗120s": {
+        "post_delay": 120000,
+        "next": [
+            "战斗结束领取奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 779,
+                "y": -165
+            }
+        }
+    },
+    "挑战开始等待挑战结束": {
+        "next": [
+            "等待巨龙自动战斗120s"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 453,
+                "y": 11
+            }
+        }
+    },
+    "战斗结束领取奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1023,
+                    626,
+                    196,
+                    60
+                ],
+                "expected": [
+                    "完成"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "检测巨龙昨日战斗奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 992,
+                "y": 115
+            }
+        }
+    },
+    "工会巨龙任务开始": {
+        "next": [
+            "进入挑战要塞巨龙"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -26,
+                "y": 383
+            }
+        }
+    },
+    "进入挑战要塞巨龙": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    933,
+                    547,
+                    103,
+                    29
+                ],
+                "expected": [
+                    "要塞"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    -20,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "进入菜单选择_巨龙"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 354
+            }
+        }
+    },
+    "进入菜单选择_巨龙": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1186,
+                    26,
+                    78,
+                    79
+                ],
+                "template": [
+                    "多菜单.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入巨龙"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 330
+            }
+        }
+    },
+    "进入巨龙": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    942,
+                    30,
+                    228,
+                    376
+                ],
+                "template": [
+                    "巨龙遗迹图片.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "检测巨龙昨日战斗奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 342
+            }
+        }
+    },
+    "检测巨龙昨日战斗奖励": {
+        "next": [
+            "有巨龙昨日奖励开始挑战"
+        ],
+        "on_error": [
+            "无可用次数退出"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1286,
+                "y": 216
+            }
+        }
+    },
+    "无可用次数退出": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    16,
+                    2,
+                    84,
+                    55
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "无可用次数回到主菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1693,
+                "y": 505
+            }
+        }
+    },
+    "无可用次数回到主菜单": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    16,
+                    2,
+                    84,
+                    55
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2004,
+                "y": 569
+            }
+        }
+    },
+    "有巨龙昨日奖励开始挑战": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    240,
+                    109,
+                    34,
+                    587
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领取巨龙昨日奖励开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1612,
+                "y": 81
+            }
+        }
+    },
+    "领取巨龙昨日奖励开始": {
+        "next": [
+            "领取昨日奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 156
+            }
+        }
+    },
+    "领取昨日奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    554,
+                    589,
+                    172,
+                    50
+                ],
+                "template": [
+                    "巨龙奖励领取.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领取巨龙奖励开始节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2252,
+                "y": 100
+            }
+        }
+    },
+    "领取巨龙奖励开始节点": {
+        "next": [
+            "执行巨龙奖励领取"
+        ],
+        "on_error": [
+            "领取奖励结束，开始挑战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2580,
+                "y": 171
+            }
+        }
+    },
+    "执行巨龙奖励领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    576,
+                    625,
+                    116,
+                    94
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "巨龙奖励领取结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2328,
+                "y": 501
+            }
+        }
+    },
+    "巨龙奖励领取结束": {
+        "next": [
+            "领取巨龙奖励开始节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2630,
+                "y": 538
+            }
+        }
+    },
+    "领取奖励结束，开始挑战": {
+        "next": [
+            "开始自动挑战巨龙"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2892,
+                "y": 175
+            }
+        }
+    }
+}

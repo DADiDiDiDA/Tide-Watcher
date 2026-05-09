@@ -1,0 +1,423 @@
+{
+    "$__mpe_config_刷装备本3-19": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -888,
+                "y": 125,
+                "zoom": 0.65
+            },
+            "filename": "刷装备本3-19",
+            "version": "v1.5.2"
+        }
+    },
+    "进入副本选择": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1159,
+                    450,
+                    99,
+                    139
+                ],
+                "expected": [
+                    "副本"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "进入装备本"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 322,
+                "y": 198
+            }
+        }
+    },
+    "进入装备本": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    99,
+                    245,
+                    193,
+                    91
+                ],
+                "expected": [
+                    "装备本"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "装备副本三"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 632,
+                "y": 198
+            }
+        }
+    },
+    "装备副本三": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    387,
+                    356,
+                    120,
+                    39
+                ],
+                "expected": [
+                    "装备"
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "进入副本三"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 942,
+                "y": 198
+            }
+        }
+    },
+    "进入副本三": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    970,
+                    406,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "选中关卡19"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1252,
+                "y": 213
+            }
+        }
+    },
+    "选中关卡19": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    54,
+                    300,
+                    91,
+                    325
+                ],
+                "expected": [
+                    "关卡19"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "进入自动战斗配置"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1562,
+                "y": 213
+            }
+        }
+    },
+    "进入自动战斗配置": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    958,
+                    620,
+                    142,
+                    52
+                ],
+                "expected": [
+                    "自动战斗"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "检测后台战斗是不是开着的"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1872,
+                "y": 198
+            }
+        }
+    },
+    "自动战斗次数最大化": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    949,
+                    262,
+                    68,
+                    63
+                ],
+                "expected": [
+                    "MAX"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
+        "next": [
+            "开始自动战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2357,
+                "y": -68
+            }
+        }
+    },
+    "开始自动战斗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    652,
+                    552,
+                    228,
+                    60
+                ],
+                "expected": [
+                    "开始战斗"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "最小化自动战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2654,
+                "y": -18
+            }
+        }
+    },
+    "最小化自动战斗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1049,
+                    557,
+                    141,
+                    47
+                ],
+                "expected": [
+                    "最小化"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
+        "next": [
+            "返回刷装备副本选择"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2906,
+                "y": 219
+            }
+        }
+    },
+    "检测后台战斗是不是开着的": {
+        "next": [
+            "后台战斗是开启的吗"
+        ],
+        "on_error": [
+            "不是后台战斗退出"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1807,
+                "y": -21
+            }
+        }
+    },
+    "后台战斗是开启的吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    225,
+                    450,
+                    188,
+                    70
+                ],
+                "template": [
+                    "后台战斗已开启.png"
+                ],
+                "threshold": [
+                    0.95
+                ]
+            }
+        },
+        "next": [
+            "自动战斗次数最大化"
+        ],
+        "on_error": [
+            "不是后台战斗退出"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2054,
+                "y": -219
+            }
+        }
+    },
+    "不是后台战斗退出": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1098,
+                    40,
+                    68,
+                    47
+                ],
+                "template": [
+                    "红色X号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "返回刷装备副本选择"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2384,
+                "y": 297
+            }
+        }
+    },
+    "返回刷装备副本选择": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    6,
+                    87,
+                    50
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "返回刷副本类型选择"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3182,
+                "y": 386
+            }
+        }
+    },
+    "返回刷副本类型选择": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    6,
+                    87,
+                    50
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "返回主界面刷装备"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3460,
+                "y": 372
+            }
+        }
+    },
+    "返回主界面刷装备": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    6,
+                    87,
+                    50
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3740,
+                "y": 326
+            }
+        }
+    }
+}

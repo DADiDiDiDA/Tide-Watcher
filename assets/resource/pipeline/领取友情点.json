@@ -1,0 +1,127 @@
+{
+    "$__mpe_config_领取友情点": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -1800,
+                "y": -101,
+                "zoom": 1.31
+            },
+            "filename": "领取友情点",
+            "version": "v1.5.2"
+        }
+    },
+    "点击好友图标": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    43,
+                    237,
+                    53,
+                    48
+                ],
+                "template": [
+                    "好友图标.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.55
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击好友界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1469,
+                "y": 171
+            }
+        }
+    },
+    "点击好友界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    31,
+                    138,
+                    76,
+                    112
+                ],
+                "expected": [
+                    "好友"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领取友情点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1729,
+                "y": 171
+            }
+        }
+    },
+    "领取友情点": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    361,
+                    549,
+                    138,
+                    50
+                ],
+                "expected": [
+                    "领取和赠送"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回上一级好友"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1989,
+                "y": 171
+            }
+        }
+    },
+    "返回上一级好友": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1199,
+                    63,
+                    48,
+                    53
+                ],
+                "template": [
+                    "红色X号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2249,
+                "y": 171
+            }
+        }
+    }
+}

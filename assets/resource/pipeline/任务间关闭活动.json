@@ -1,0 +1,89 @@
+{
+    "$__mpe_config_点击关闭": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -7995,
+                "y": -359,
+                "zoom": 1.14
+            },
+            "filename": "点击关闭",
+            "version": "v1.5.2"
+        }
+    },
+    "节点间广告关闭开始": {
+        "next": [
+            "节点执行间广告关闭"
+        ],
+        "on_error": [
+            "关闭活动结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7001,
+                "y": 401
+            }
+        }
+    },
+    "节点执行间广告关闭": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    588,
+                    604,
+                    108,
+                    107
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "广告关闭节点结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7296,
+                "y": 125
+            }
+        }
+    },
+    "广告关闭节点结束": {
+        "next": [
+            "节点间广告关闭开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7634,
+                "y": 178
+            }
+        }
+    },
+    "关闭活动结束": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    952,
+                    584,
+                    311,
+                    107
+                ],
+                "template": [
+                    "战役图标.png"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 7649,
+                "y": 435
+            }
+        }
+    }
+}

@@ -1,0 +1,271 @@
+{
+    "$__mpe_config_矮人超市购买": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": 312,
+                "y": 218,
+                "zoom": 0.86
+            },
+            "filename": "矮人超市购买",
+            "version": "v1.5.2"
+        }
+    },
+    "矮人超市购买开始": {
+        "next": [
+            "点击矮人超市"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 103
+            }
+        }
+    },
+    "点击矮人超市": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    758,
+                    377,
+                    116,
+                    104
+                ],
+                "template": [
+                    "蓝色矮人商城图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "购买第一行金币物品开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 51
+            }
+        }
+    },
+    "购买第一行的金币物品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    455,
+                    318,
+                    782,
+                    39
+                ],
+                "template": [
+                    "矮人超市金币商品（第一行.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "一键购买选定物品开始"
+        ],
+        "on_error": [
+            "退回主界面矮人超市"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 969,
+                "y": -150
+            }
+        }
+    },
+    "一键购买选定物品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    858,
+                    641,
+                    181,
+                    59
+                ],
+                "template": [
+                    "矮人超市一键购买.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "是否有一键购买"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1532,
+                "y": -211
+            }
+        }
+    },
+    "是否有一键购买": {
+        "next": [
+            "有选择商品"
+        ],
+        "on_error": [
+            "无可一键购买商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1843,
+                "y": -199
+            }
+        }
+    },
+    "一键购买选定物品开始": {
+        "next": [
+            "一键购买选定物品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1239,
+                "y": -133
+            }
+        }
+    },
+    "有选择商品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    562,
+                    159,
+                    167,
+                    65
+                ],
+                "template": [
+                    "矮人超市一键购买确认.png"
+                ]
+            }
+        },
+        "next": [
+            "确认一键购买"
+        ],
+        "on_error": [
+            "无可一键购买商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2172,
+                "y": -394
+            }
+        }
+    },
+    "确认一键购买": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    700,
+                    496,
+                    88,
+                    37
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认奖励弹窗矮人"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2567,
+                "y": -383
+            }
+        }
+    },
+    "确认奖励弹窗矮人": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    574,
+                    672,
+                    139,
+                    35
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "退回主界面矮人超市"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2861,
+                "y": -374
+            }
+        }
+    },
+    "无可一键购买商品": {
+        "next": [
+            "退回主界面矮人超市"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2449,
+                "y": -69
+            }
+        }
+    },
+    "退回主界面矮人超市": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "roi": [
+                    7,
+                    3,
+                    77,
+                    51
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3212,
+                "y": 12
+            }
+        }
+    },
+    "购买第一行金币物品开始": {
+        "next": [
+            "购买第一行的金币物品"
+        ],
+        "on_error": [
+            "退回主界面矮人超市"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 103
+            }
+        }
+    }
+}

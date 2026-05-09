@@ -1,0 +1,860 @@
+{
+    "$__mpe_config_领取商城免费礼包": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -3830,
+                "y": -264,
+                "zoom": 0.75
+            },
+            "filename": "领取商城免费礼包",
+            "version": "v1.5.2"
+        }
+    },
+    "在商城寻找奖励图标": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    235,
+                    60,
+                    52,
+                    437
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始寻找分类下的奖励商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4695,
+                "y": 171
+            }
+        }
+    },
+    "未找到奖励图标；下滑屏幕第一次": {
+        "next": [
+            "未找到奖励图标；下滑屏幕"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4750,
+                "y": 526
+            }
+        }
+    },
+    "未找到奖励图标；下滑屏幕": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    154,
+                    576,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        149,
+                        309,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "开始寻找奖励图标日常礼包"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5016,
+                "y": 576
+            }
+        }
+    },
+    "开始寻找分类下的奖励商品": {
+        "next": [
+            "寻找分类下的奖励商品"
+        ],
+        "on_error": [
+            "开始第一次没找到滑动屏幕"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4955,
+                "y": 171
+            }
+        }
+    },
+    "寻找分类下的奖励商品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    290,
+                    47,
+                    966,
+                    44
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始购买好运商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5202,
+                "y": -99
+            }
+        }
+    },
+    "开始购买好运商品": {
+        "next": [
+            "购买好运商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5582,
+                "y": -75
+            }
+        }
+    },
+    "购买好运商品": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    921,
+                    581,
+                    151,
+                    45
+                ],
+                "expected": [
+                    "立即领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始领取商品奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5870,
+                "y": -13
+            }
+        }
+    },
+    "开始领取商品奖励": {
+        "next": [
+            "领取商品奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6258,
+                "y": -6
+            }
+        }
+    },
+    "领取商品奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    575,
+                    628,
+                    128,
+                    86
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "未找到奖励图标；下滑屏幕第一次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6532,
+                "y": 53
+            }
+        }
+    },
+    "开始第一次没找到滑动屏幕": {
+        "next": [
+            "第一次没找到滑动屏幕"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5287,
+                "y": 245
+            }
+        }
+    },
+    "第一次没找到滑动屏幕": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1050,
+                    86,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        560,
+                        78,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "寻找分类下的奖励商品第二次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5579,
+                "y": 164
+            }
+        }
+    },
+    "第二次寻找分类下的奖励商品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    235,
+                    60,
+                    52,
+                    437
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "第二次开始购买好运商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6146,
+                "y": 189
+            }
+        }
+    },
+    "第二次开始购买好运商品": {
+        "next": [
+            "第二次购买好运商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6459,
+                "y": 296
+            }
+        }
+    },
+    "第二次购买好运商品": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    921,
+                    581,
+                    151,
+                    45
+                ],
+                "expected": [
+                    "立即领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "第二次开始领取商品奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6721,
+                "y": 276
+            }
+        }
+    },
+    "第二次开始领取商品奖励": {
+        "next": [
+            "第二次领取商品奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6991,
+                "y": 394
+            }
+        }
+    },
+    "第二次领取商品奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    575,
+                    628,
+                    128,
+                    86
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "未找到奖励图标；下滑屏幕第一次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7261,
+                "y": 422
+            }
+        }
+    },
+    "在商城寻找奖励图标日常礼包": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    238,
+                    495,
+                    47,
+                    223
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始寻找日常礼包"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5700,
+                "y": 457
+            }
+        }
+    },
+    "寻找分类下的奖励商品第二次": {
+        "next": [
+            "第二次寻找分类下的奖励商品"
+        ],
+        "on_error": [
+            "未找到奖励图标；下滑屏幕第一次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5839,
+                "y": 164
+            }
+        }
+    },
+    "开始寻找日常礼包": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    39,
+                    355,
+                    162,
+                    340
+                ],
+                "expected": [
+                    "日常礼包"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始领取免费体力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6014,
+                "y": 544
+            }
+        }
+    },
+    "开始寻找奖励图标日常礼包": {
+        "next": [
+            "在商城寻找奖励图标日常礼包"
+        ],
+        "on_error": [
+            "无可领取奖励退出"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5311,
+                "y": 599
+            }
+        }
+    },
+    "无可领取奖励退出": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    4,
+                    3,
+                    92,
+                    48
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 6966,
+                "y": 1408
+            }
+        }
+    },
+    "开始领取免费体力": {
+        "next": [
+            "领取免费体力"
+        ],
+        "on_error": [
+            "开始领取英灵召唤包"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6274,
+                "y": 544
+            }
+        }
+    },
+    "领取免费体力": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1107,
+                    112,
+                    142,
+                    63
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -34,
+                    16,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "确认领取免费体力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6688,
+                "y": 530
+            }
+        }
+    },
+    "确认领取免费体力": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    586,
+                    623,
+                    113,
+                    89
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始领取英灵召唤包"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6964,
+                "y": 536
+            }
+        }
+    },
+    "开始领取英灵召唤包": {
+        "next": [
+            "进入英灵召唤包界面"
+        ],
+        "on_error": [
+            "开始进入W币商城"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6706,
+                "y": 842
+            }
+        }
+    },
+    "进入英灵召唤包界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    529,
+                    47,
+                    714,
+                    47
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始领取英灵召唤包奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6980,
+                "y": 759
+            }
+        }
+    },
+    "开始领取英灵召唤包奖励": {
+        "next": [
+            "领取英灵召唤包奖励"
+        ],
+        "on_error": [
+            "开始进入W币商城"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7268,
+                "y": 863
+            }
+        }
+    },
+    "领取英灵召唤包奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    398,
+                    596,
+                    86,
+                    47
+                ],
+                "expected": [
+                    "免费"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "收取奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7597,
+                "y": 766
+            }
+        }
+    },
+    "收取奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    572,
+                    618,
+                    131,
+                    97
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始领取英灵召唤包奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7860,
+                "y": 707
+            }
+        }
+    },
+    "开始进入W币商城": {
+        "next": [
+            "进入W币商城"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6828,
+                "y": 1089
+            }
+        }
+    },
+    "进入W币商城": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    55,
+                    372,
+                    131,
+                    322
+                ],
+                "expected": [
+                    "W币商城"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "查看W币商城二级界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7112,
+                "y": 1118
+            }
+        }
+    },
+    "查看W币商城二级界面": {
+        "next": [
+            "检查W币商城二级界面"
+        ],
+        "on_error": [
+            "无可领取奖励退出"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7372,
+                "y": 1118
+            }
+        }
+    },
+    "检查W币商城二级界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    429,
+                    49,
+                    688,
+                    47
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "购买每日限购物品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7632,
+                "y": 1118
+            }
+        }
+    },
+    "购买每日限购物品": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    389,
+                    588,
+                    76,
+                    50
+                ],
+                "expected": [
+                    "免费"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认每日限购物品奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7892,
+                "y": 1118
+            }
+        }
+    },
+    "确认每日限购物品奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    585,
+                    617,
+                    120,
+                    102
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "无可领取奖励退出"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8152,
+                "y": 1118
+            }
+        }
+    },
+    "领取商城免费礼包开始": {
+        "next": [
+            "进入商城界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3795,
+                "y": 378
+            }
+        }
+    },
+    "进入商城界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    12,
+                    568,
+                    114,
+                    124
+                ],
+                "template": [
+                    "商店图片.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "在商城寻找奖励图标第一次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4076,
+                "y": 379
+            }
+        }
+    },
+    "在商城寻找奖励图标第一次": {
+        "next": [
+            "在商城寻找奖励图标"
+        ],
+        "on_error": [
+            "未找到奖励图标；下滑屏幕第一次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4426,
+                "y": 377
+            }
+        }
+    }
+}

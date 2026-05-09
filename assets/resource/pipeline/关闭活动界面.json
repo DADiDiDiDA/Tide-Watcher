@@ -1,0 +1,283 @@
+{
+    "$__mpe_config_关闭活动界面": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -2967,
+                "y": 114,
+                "zoom": 0.75
+            },
+            "filename": "关闭活动界面",
+            "version": "v1.5.2"
+        }
+    },
+    "关闭活动界面开始": {
+        "next": [
+            "检测每日签到"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2506,
+                "y": 167
+            }
+        }
+    },
+    "检测每日签到": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1195,
+                    3,
+                    82,
+                    126
+                ],
+                "template": [
+                    "红色X号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭签到奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2808,
+                "y": -80
+            }
+        }
+    },
+    "关闭签到奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    575,
+                    618,
+                    131,
+                    91
+                ],
+                "expected": [
+                    "点击关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭活动界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3079,
+                "y": -184
+            }
+        }
+    },
+    "关闭活动奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    575,
+                    618,
+                    131,
+                    91
+                ],
+                "expected": [
+                    "点击关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭召唤界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3717,
+                "y": 137
+            }
+        }
+    },
+    "检测活动界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1195,
+                    3,
+                    82,
+                    126
+                ],
+                "template": [
+                    "红色X号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭活动奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3444,
+                "y": 109
+            }
+        }
+    },
+    "关闭活动界面": {
+        "next": [
+            "检测活动界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3356,
+                "y": -130
+            }
+        }
+    },
+    "关闭召唤界面开始": {
+        "next": [
+            "关闭召唤推荐界面"
+        ],
+        "on_error": [
+            "英雄来访节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4043,
+                "y": 117
+            }
+        }
+    },
+    "关闭召唤推荐界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1164,
+                    7,
+                    111,
+                    113
+                ],
+                "template": [
+                    "白色叉号.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "新建节点7"
+        ],
+        "on_error": [
+            "英雄来访节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4349,
+                "y": -249
+            }
+        }
+    },
+    "新建节点7": {
+        "next": [
+            "关闭召唤界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4691,
+                "y": -105
+            }
+        }
+    },
+    "英雄来访节点": {
+        "next": [
+            "关闭英雄来访"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4427,
+                "y": 274
+            }
+        }
+    },
+    "关闭英雄来访": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    583,
+                    584,
+                    121,
+                    127
+                ],
+                "expected": [
+                    "继续"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "到主菜单了吗节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4715,
+                "y": 256
+            }
+        }
+    },
+    "到主菜单了吗节点": {
+        "next": [
+            "检测到主菜单了吗"
+        ],
+        "on_error": [
+            "关闭活动界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4990,
+                "y": 216
+            }
+        }
+    },
+    "检测到主菜单了吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    950,
+                    589,
+                    314,
+                    87
+                ],
+                "template": [
+                    "战役图标.png"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 5313,
+                "y": 169
+            }
+        }
+    }
+}

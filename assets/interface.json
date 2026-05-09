@@ -1,10 +1,10 @@
 {
     "interface_version": 2,
-    "name": "MAA-E7",
-    "description": "《第七史诗》自动化脚本 - 包含启动游戏、关闭公告栏、签到、刷体力、竞技场、商店购买、活跃度奖励等功能",
+    "name": "Tide-Watcher",
+    "description": "Tide-Watcher自动化",
     "contact": "",
     "license": "MIT",
-    "welcome": "欢迎使用 MAA-E7 第七史诗自动化助手",
+    "welcome": "欢迎使用 Tide-Watcher自动化助手",
     "version": "1.0.0",
     
     "controller": [
@@ -27,58 +27,78 @@
     "task": [
         {
             "name": "🚀 启动游戏",
-            "entry": "启动游戏",
-            "description": "最好使用设置里的启动功能而不是我"
+            "entry": "登陆游戏节点开始",
+            "description": "自动登录游戏"
         },
         {
-            "name": "❌ 关闭公告栏",
-            "entry": "检测公告栏",
-            "description": ""
+            "name": "❌ 关闭活动界面",
+            "entry": "关闭活动界面开始",
+            "description": "关闭签到、英雄来访等活动弹窗"
         },
         {
-            "name": "🎮 进入游戏",
-            "entry": "进入登陆界面",
-            "description": ""
+            "name": "📦 分解角色",
+            "entry": "分解角色开始节点",
+            "description": "自动遣散一星二星三星角色"
         },
         {
-            "name": "📅 签到及辅助奖励",
-            "entry": "有每日首次增益界面吗23",
-            "description": "可能会比较慢，是正常的"
+            "name": "🌊 魔潮扫荡",
+            "entry": "魔潮扫荡开始节点",
+            "description": "自动扫荡魔潮副本"
         },
         {
-            "name": "⚔️ 刷体力",
-            "entry": "进入战斗界面",
-            "description": "只会刷取飞龙难度三"
+            "name": "⛏️ 矿场领取",
+            "entry": "点击矿场",
+            "description": "领取矿场资源"
         },
         {
-            "name": "🏟️ 竞技场10次",
-            "entry": "进入竞技场选择",
-            "description": "只刷人机竞技场，快速战斗次数和挑战次数不足时会退出"
+            "name": "🛒 矮人超市购买",
+            "entry": "矮人超市购买开始",
+            "description": "购买矮人超市金币商品"
         },
         {
-            "name": "🛒 商店购买每日物品",
-            "entry": "进入商店界面",
-            "description": "只买友情点物品，友情点不够也没关系"
+            "name": "👥 领取友情点",
+            "entry": "点击好友图标",
+            "description": "领取并赠送友情点"
         },
         {
-            "name": "🎁 领取活跃度奖励",
-            "entry": "进入选择菜单",
-            "description": ""
+            "name": "💪 友情点换体力",
+            "entry": "点击增加体力图标",
+            "description": "使用友情点兑换体力"
         },
         {
-            "name": "⚔️ 骑士团签到并请求资源",
-            "entry": "点击主界面菜单选择",
-            "description": "只请求经验精灵"
+            "name": "🚢 休伯利安",
+            "entry": "点击休伯利安开始",
+            "description": "领取休伯利安奖励"
         },
         {
-            "name": "🔙 左上角返回主界面",
-            "entry": "返回主界面两次",
-            "description": "保底措施，以防止某些任务没有正常执行，无法返回主界面从而影响下一个任务执行"
+            "name": "⚔️ 刷装备本3-19",
+            "entry": "进入副本选择",
+            "description": "自动刷装备副本3-19"
         },
         {
-            "name": "⚔️ 重复刷本",
-            "entry": "检测自动战斗是否结束",
-            "description": "进入自动战斗界面再开启（已经出现 自动战斗0/30 再开启）"
+            "name": "📋 领取任务奖励",
+            "entry": "进入任务界面开始",
+            "description": "领取每日任务奖励"
+        },
+        {
+            "name": "🐉 工会巨龙",
+            "entry": "工会巨龙任务开始",
+            "description": "自动挑战工会巨龙"
+        },
+        {
+            "name": "⛵ 航海",
+            "entry": "航海启动",
+            "description": "启航航海任务"
+        },
+        {
+            "name": "🎁 领取商城免费礼包",
+            "entry": "领取商城免费礼包开始",
+            "description": "领取商城各类免费礼包"
+        },
+        {
+            "name": "🔄 任务间关闭活动",
+            "entry": "节点间广告关闭开始",
+            "description": "任务执行间隙关闭广告/活动弹窗"
         }
     ]
 }

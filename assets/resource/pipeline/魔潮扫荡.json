@@ -1,0 +1,292 @@
+{
+    "$__mpe_config_魔潮扫荡": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -3909,
+                "y": -66,
+                "zoom": 0.75
+            },
+            "filename": "魔潮扫荡",
+            "version": "v1.5.2"
+        }
+    },
+    "魔潮扫荡开始节点": {
+        "next": [
+            "进入挑战要塞魔潮"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3498,
+                "y": 344
+            }
+        }
+    },
+    "检测魔潮扫荡图标": {
+        "next": [
+            "有没有扫荡按键"
+        ],
+        "on_error": [
+            "无可用次数返回魔潮"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4604,
+                "y": 299
+            }
+        }
+    },
+    "无可用次数回到主菜单魔潮": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    7,
+                    5,
+                    78,
+                    50
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 6563,
+                "y": 467
+            }
+        }
+    },
+    "无可用次数返回魔潮": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    7,
+                    5,
+                    78,
+                    50
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "无可用次数回到主菜单魔潮"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6215,
+                "y": 501
+            }
+        }
+    },
+    "有没有扫荡按键": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    17,
+                    567,
+                    368,
+                    64
+                ],
+                "expected": [
+                    "扫荡奖励"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认开始魔潮扫荡"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4951,
+                "y": 181
+            }
+        }
+    },
+    "领取魔潮扫荡奖励节点": {
+        "next": [
+            "领取魔潮奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5648,
+                "y": 182
+            }
+        }
+    },
+    "进入挑战要塞魔潮": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    933,
+                    547,
+                    103,
+                    29
+                ],
+                "expected": [
+                    "要塞"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    -20,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "进入菜单选择"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3833,
+                "y": 329
+            }
+        }
+    },
+    "进入菜单选择": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1186,
+                    26,
+                    78,
+                    79
+                ],
+                "template": [
+                    "多菜单.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "选择魔潮"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4093,
+                "y": 329
+            }
+        }
+    },
+    "选择魔潮": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    942,
+                    30,
+                    228,
+                    376
+                ],
+                "template": [
+                    "魔潮图片.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "检测魔潮扫荡图标"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4353,
+                "y": 329
+            }
+        }
+    },
+    "领取魔潮奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    578,
+                    625,
+                    129,
+                    89
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "无可用次数返回魔潮"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5916,
+                "y": 296
+            }
+        }
+    },
+    "确认开始魔潮扫荡": {
+        "next": [
+            "确认不使用剩余次数"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5126,
+                "y": 10
+            }
+        }
+    },
+    "确认不使用剩余次数": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    670,
+                    436,
+                    202,
+                    52
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领取魔潮扫荡奖励节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5385,
+                "y": 14
+            }
+        }
+    }
+}

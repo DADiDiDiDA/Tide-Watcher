@@ -1,0 +1,256 @@
+{
+    "$__mpe_config_航海": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -463,
+                "y": 94,
+                "zoom": 0.86
+            },
+            "filename": "航海",
+            "version": "v1.5.2"
+        }
+    },
+    "启航按钮有次数吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    853,
+                    598,
+                    203,
+                    66
+                ],
+                "template": [
+                    "启航正常按钮.png"
+                ],
+                "threshold": [
+                    0.85
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "航海结束"
+        ],
+        "on_error": [
+            "航海节点无次数"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 916,
+                "y": -64
+            }
+        }
+    },
+    "航海资源满了领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    581,
+                    625,
+                    117,
+                    88
+                ],
+                "expected": [
+                    "点击关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "on_error": [
+            "航海检测状态"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1097,
+                "y": -306
+            }
+        }
+    },
+    "航海节点次数检测": {
+        "next": [
+            "启航按钮有次数吗"
+        ],
+        "on_error": [
+            "航海节点无次数"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 538,
+                "y": 50
+            }
+        }
+    },
+    "航海节点无次数": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    847,
+                    582,
+                    225,
+                    99
+                ],
+                "template": [
+                    "航海灰色启航按钮.png",
+                    "航海进行中.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "航海无次数返回主界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 923,
+                "y": 225
+            }
+        }
+    },
+    "航海无次数返回主界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    2,
+                    79,
+                    50
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1472,
+                "y": 174
+            }
+        }
+    },
+    "航海结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1363,
+                "y": -76
+            }
+        }
+    },
+    "航海启动": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    180,
+                    560,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        779,
+                        283,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 1500,
+        "next": [
+            "航海检测状态"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -498,
+                "y": -83
+            }
+        }
+    },
+    "检测航海状态": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    353,
+                    180,
+                    372,
+                    196
+                ],
+                "template": [
+                    "航海图标.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "航海节点次数检测"
+        ],
+        "on_error": [
+            "是不是航海资源满了_结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 185,
+                "y": -6
+            }
+        }
+    },
+    "是不是航海资源满了_结束": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    353,
+                    180,
+                    372,
+                    196
+                ],
+                "template": [
+                    "资源已满.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "航海资源满了领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 698,
+                "y": -463
+            }
+        }
+    },
+    "航海检测状态": {
+        "next": [
+            "检测航海状态"
+        ],
+        "on_error": [
+            "[JumpBack]是不是航海资源满了_结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -89,
+                "y": -173
+            }
+        }
+    }
+}

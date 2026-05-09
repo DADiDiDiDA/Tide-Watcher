@@ -1,0 +1,156 @@
+{
+    "$__mpe_config_友情点换体力": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -2370,
+                "y": 101,
+                "zoom": 0.86
+            },
+            "filename": "友情点换体力",
+            "version": "v1.5.2"
+        }
+    },
+    "点击增加体力图标": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    598,
+                    16,
+                    82,
+                    32
+                ],
+                "template": [
+                    "体力右边的小加号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入更换界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2535,
+                "y": 205
+            }
+        }
+    },
+    "进入更换界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1028,
+                    508,
+                    68,
+                    31
+                ],
+                "expected": [
+                    "150"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "换体力开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2803,
+                "y": 48
+            }
+        }
+    },
+    "换体力": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    771,
+                    512,
+                    57,
+                    40
+                ],
+                "expected": [
+                    "150"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回上一级换体力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3358,
+                "y": -17
+            }
+        }
+    },
+    "返回上一级换体力": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    570,
+                    620,
+                    141,
+                    89
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回主菜单换体力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3623,
+                "y": 5
+            }
+        }
+    },
+    "返回主菜单换体力": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "红色X号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3839,
+                "y": 226
+            }
+        }
+    },
+    "换体力开始": {
+        "next": [
+            "换体力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3096,
+                "y": -53
+            }
+        }
+    }
+}
