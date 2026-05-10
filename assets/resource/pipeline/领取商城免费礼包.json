@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -3830,
-                "y": -264,
-                "zoom": 0.75
+                "x": -3805,
+                "y": -187,
+                "zoom": 0.65
             },
             "filename": "领取商城免费礼包",
             "version": "v1.5.2"
@@ -32,6 +32,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始寻找分类下的奖励商品"
         ],
@@ -40,20 +41,19 @@
                 "x": 4695,
                 "y": 171
             }
-        },
-        "post_delay": 2000
+        }
     },
     "未找到奖励图标；下滑屏幕第一次": {
+        "post_delay": 2000,
         "next": [
             "未找到奖励图标；下滑屏幕"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4750,
-                "y": 526
+                "x": 4790,
+                "y": 570
             }
-        },
-        "post_delay": 2000
+        }
     },
     "未找到奖励图标；下滑屏幕": {
         "action": {
@@ -70,23 +70,24 @@
                         149,
                         309,
                         1,
-                    1
+                        1
                     ]
                 ]
             }
         },
+        "post_delay": 2000,
         "next": [
             "开始寻找奖励图标日常礼包"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5016,
-                "y": 576
+                "x": 5096,
+                "y": 591
             }
-        },
-        "post_delay": 2000
+        }
     },
     "开始寻找分类下的奖励商品": {
+        "post_delay": 2000,
         "next": [
             "寻找分类下的奖励商品"
         ],
@@ -95,11 +96,10 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4955,
-                "y": 171
+                "x": 4888,
+                "y": -142
             }
-        },
-        "post_delay": 2000
+        }
     },
     "寻找分类下的奖励商品": {
         "recognition": {
@@ -122,28 +122,28 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始购买好运商品"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5202,
-                "y": -99
+                "x": 5248,
+                "y": -396
             }
-        },
-        "post_delay": 2000
+        }
     },
     "开始购买好运商品": {
+        "post_delay": 2000,
         "next": [
             "购买好运商品"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5582,
-                "y": -75
+                "x": 5633,
+                "y": -328
             }
-        },
-        "post_delay": 2000
+        }
     },
     "购买好运商品": {
         "recognition": {
@@ -163,28 +163,28 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始领取商品奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5870,
-                "y": -13
+                "x": 6016,
+                "y": -364
             }
-        },
-        "post_delay": 2000
+        }
     },
     "开始领取商品奖励": {
+        "post_delay": 2000,
         "next": [
             "领取商品奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6258,
-                "y": -6
+                "x": 6376,
+                "y": -329
             }
-        },
-        "post_delay": 2000
+        }
     },
     "领取商品奖励": {
         "recognition": {
@@ -204,28 +204,28 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "未找到奖励图标；下滑屏幕第一次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6532,
-                "y": 53
+                "x": 6838,
+                "y": -184
             }
-        },
-        "post_delay": 2000
+        }
     },
     "开始第一次没找到滑动屏幕": {
+        "post_delay": 2000,
         "next": [
             "第一次没找到滑动屏幕"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5287,
-                "y": 245
+                "x": 5229,
+                "y": 69
             }
-        },
-        "post_delay": 2000
+        }
     },
     "第一次没找到滑动屏幕": {
         "action": {
@@ -247,26 +247,26 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "next": [
             "寻找分类下的奖励商品第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5579,
-                "y": 164
+                "x": 5528,
+                "y": 23
             }
-        },
-        "post_delay": 2000
+        }
     },
     "第二次寻找分类下的奖励商品": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    235,
-                    60,
+                    343,
                     52,
-                    437
+                    917,
+                    49
                 ],
                 "template": [
                     "待领取图标.png"
@@ -279,28 +279,28 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "第二次开始购买好运商品"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6146,
-                "y": 189
+                "x": 6141,
+                "y": -25
             }
-        },
-        "post_delay": 2000
+        }
     },
     "第二次开始购买好运商品": {
+        "post_delay": 2000,
         "next": [
             "第二次购买好运商品"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6459,
-                "y": 296
+                "x": 6498,
+                "y": 99
             }
-        },
-        "post_delay": 2000
+        }
     },
     "第二次购买好运商品": {
         "recognition": {
@@ -320,28 +320,28 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "第二次开始领取商品奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6721,
-                "y": 276
+                "x": 6837,
+                "y": 118
             }
-        },
-        "post_delay": 2000
+        }
     },
     "第二次开始领取商品奖励": {
+        "post_delay": 2000,
         "next": [
             "第二次领取商品奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6991,
-                "y": 394
+                "x": 7172,
+                "y": 136
             }
-        },
-        "post_delay": 2000
+        }
     },
     "第二次领取商品奖励": {
         "recognition": {
@@ -361,16 +361,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "未找到奖励图标；下滑屏幕第一次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7261,
-                "y": 422
+                "x": 7649,
+                "y": 246
             }
-        },
-        "post_delay": 2000
+        }
     },
     "在商城寻找奖励图标日常礼包": {
         "recognition": {
@@ -393,6 +393,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始寻找日常礼包"
         ],
@@ -401,10 +402,10 @@
                 "x": 5700,
                 "y": 457
             }
-        },
-        "post_delay": 2000
+        }
     },
     "寻找分类下的奖励商品第二次": {
+        "post_delay": 2000,
         "next": [
             "第二次寻找分类下的奖励商品"
         ],
@@ -413,11 +414,10 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5839,
-                "y": 164
+                "x": 5827,
+                "y": 8
             }
-        },
-        "post_delay": 2000
+        }
     },
     "开始寻找日常礼包": {
         "recognition": {
@@ -437,6 +437,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始领取免费体力"
         ],
@@ -445,10 +446,10 @@
                 "x": 6014,
                 "y": 544
             }
-        },
-        "post_delay": 2000
+        }
     },
     "开始寻找奖励图标日常礼包": {
+        "post_delay": 2000,
         "next": [
             "在商城寻找奖励图标日常礼包"
         ],
@@ -457,11 +458,10 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5311,
-                "y": 599
+                "x": 5362,
+                "y": 598
             }
-        },
-        "post_delay": 2000
+        }
     },
     "无可领取奖励退出": {
         "recognition": {
@@ -481,15 +481,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 6966,
-                "y": 1408
+                "x": 6627,
+                "y": 1550
             }
-        },
-        "post_delay": 2000
+        }
     },
     "开始领取免费体力": {
+        "post_delay": 2000,
         "next": [
             "领取免费体力"
         ],
@@ -501,8 +502,7 @@
                 "x": 6274,
                 "y": 544
             }
-        },
-        "post_delay": 2000
+        }
     },
     "领取免费体力": {
         "recognition": {
@@ -533,16 +533,16 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "next": [
             "确认领取免费体力"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6688,
-                "y": 530
+                "x": 6790,
+                "y": 449
             }
-        },
-        "post_delay": 2000
+        }
     },
     "确认领取免费体力": {
         "recognition": {
@@ -562,18 +562,19 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始领取英灵召唤包"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6964,
-                "y": 536
+                "x": 7154,
+                "y": 466
             }
-        },
-        "post_delay": 2000
+        }
     },
     "开始领取英灵召唤包": {
+        "post_delay": 2000,
         "next": [
             "进入英灵召唤包界面"
         ],
@@ -582,11 +583,10 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6706,
-                "y": 842
+                "x": 6687,
+                "y": 981
             }
-        },
-        "post_delay": 2000
+        }
     },
     "进入英灵召唤包界面": {
         "recognition": {
@@ -609,18 +609,19 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始领取英灵召唤包奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6980,
-                "y": 759
+                "x": 7154,
+                "y": 901
             }
-        },
-        "post_delay": 2000
+        }
     },
     "开始领取英灵召唤包奖励": {
+        "post_delay": 2000,
         "next": [
             "领取英灵召唤包奖励"
         ],
@@ -629,11 +630,10 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7268,
-                "y": 863
+                "x": 7489,
+                "y": 933
             }
-        },
-        "post_delay": 2000
+        }
     },
     "领取英灵召唤包奖励": {
         "recognition": {
@@ -653,16 +653,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "收取奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7597,
-                "y": 766
+                "x": 7843,
+                "y": 894
             }
-        },
-        "post_delay": 2000
+        }
     },
     "收取奖励": {
         "recognition": {
@@ -682,28 +682,28 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始领取英灵召唤包奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7860,
-                "y": 707
+                "x": 8132,
+                "y": 716
             }
-        },
-        "post_delay": 2000
+        }
     },
     "开始进入W币商城": {
+        "post_delay": 2000,
         "next": [
             "进入W币商城"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6828,
-                "y": 1089
+                "x": 6619,
+                "y": 1272
             }
-        },
-        "post_delay": 2000
+        }
     },
     "进入W币商城": {
         "recognition": {
@@ -723,18 +723,19 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "查看W币商城二级界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7112,
-                "y": 1118
+                "x": 7008,
+                "y": 1234
             }
-        },
-        "post_delay": 2000
+        }
     },
     "查看W币商城二级界面": {
+        "post_delay": 2000,
         "next": [
             "检查W币商城二级界面"
         ],
@@ -743,11 +744,10 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7372,
-                "y": 1118
+                "x": 7365,
+                "y": 1262
             }
-        },
-        "post_delay": 2000
+        }
     },
     "检查W币商城二级界面": {
         "recognition": {
@@ -770,16 +770,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "购买每日限购物品"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7632,
-                "y": 1118
+                "x": 7683,
+                "y": 1211
             }
-        },
-        "post_delay": 2000
+        }
     },
     "购买每日限购物品": {
         "recognition": {
@@ -799,16 +799,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "确认每日限购物品奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7892,
-                "y": 1118
+                "x": 7966,
+                "y": 1199
             }
-        },
-        "post_delay": 2000
+        }
     },
     "确认每日限购物品奖励": {
         "recognition": {
@@ -828,18 +828,19 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "无可领取奖励退出"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8152,
-                "y": 1118
+                "x": 8312,
+                "y": 1220
             }
-        },
-        "post_delay": 2000
+        }
     },
     "领取商城免费礼包开始": {
+        "post_delay": 2000,
         "next": [
             "进入商城界面"
         ],
@@ -848,8 +849,7 @@
                 "x": 3795,
                 "y": 378
             }
-        },
-        "post_delay": 2000
+        }
     },
     "进入商城界面": {
         "recognition": {
@@ -869,6 +869,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "在商城寻找奖励图标第一次"
         ],
@@ -877,10 +878,10 @@
                 "x": 4076,
                 "y": 379
             }
-        },
-        "post_delay": 2000
+        }
     },
     "在商城寻找奖励图标第一次": {
+        "post_delay": 2000,
         "next": [
             "在商城寻找奖励图标"
         ],
@@ -892,7 +893,6 @@
                 "x": 4426,
                 "y": 377
             }
-        },
-        "post_delay": 2000
+        }
     }
 }

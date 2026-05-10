@@ -1,0 +1,231 @@
+{
+    "$__mpe_config_英灵召唤一次": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -11079,
+                "y": 500,
+                "zoom": 1.5
+            },
+            "filename": "英灵召唤一次",
+            "version": "v1.5.2"
+        }
+    },
+    "开始英灵召唤一次任务": {
+        "next": [
+            "进入英灵召唤界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6276,
+                "y": -58
+            }
+        }
+    },
+    "进入英灵召唤界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    741,
+                    593,
+                    218,
+                    87
+                ],
+                "template": [
+                    "召唤图片.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始选择英灵召唤"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6602,
+                "y": -192
+            }
+        }
+    },
+    "开始选择英灵召唤": {
+        "next": [
+            "选择英灵召唤"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6918,
+                "y": -205
+            }
+        }
+    },
+    "选择英灵召唤": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    52,
+                    169,
+                    121,
+                    387
+                ],
+                "expected": [
+                    "英灵"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "单次召唤开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7216,
+                "y": -352
+            }
+        }
+    },
+    "开始单次召唤": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    335,
+                    541,
+                    302,
+                    102
+                ],
+                "template": [
+                    "单次英灵召唤.png",
+                    "英灵召唤钻石.png"
+                ],
+                "threshold": [
+                    0.95
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "等待召唤动画结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7788,
+                "y": -258
+            }
+        }
+    },
+    "等待召唤动画结束": {
+        "post_delay": 10000,
+        "next": [
+            "确定召唤角色"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8204,
+                "y": -421
+            }
+        }
+    },
+    "确定召唤角色": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1034,
+                    615,
+                    202,
+                    81
+                ],
+                "expected": [
+                    "继续"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确定收获召唤角色"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8494,
+                "y": -366
+            }
+        }
+    },
+    "确定收获召唤角色": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    512,
+                    555,
+                    259,
+                    105
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "召唤结束返回主界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8792,
+                "y": -180
+            }
+        }
+    },
+    "召唤结束返回主界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    4,
+                    105,
+                    51
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 8991,
+                "y": 125
+            }
+        }
+    },
+    "单次召唤开始": {
+        "next": [
+            "开始单次召唤"
+        ],
+        "on_error": [
+            "召唤结束返回主界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7505,
+                "y": -223
+            }
+        }
+    }
+}

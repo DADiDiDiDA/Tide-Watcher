@@ -3,83 +3,25 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -1464,
-                "y": 166,
-                "zoom": 0.43
+                "x": -1417,
+                "y": 118,
+                "zoom": 0.86
             },
             "filename": "关闭活动界面",
             "version": "v1.5.2"
         }
     },
     "关闭活动界面开始": {
+        "post_delay": 25000,
         "next": [
             "新角色展馆开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1951,
-                "y": 63
+                "x": 2034,
+                "y": 31
             }
-        },
-        "post_delay": 2000
-    },
-    "检测每日签到": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    1195,
-                    3,
-                    82,
-                    126
-                ],
-                "template": [
-                    "红色X号.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "关闭签到奖励"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2822,
-                "y": -475
-            }
-        },
-        "post_delay": 2000
-    },
-    "关闭签到奖励": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    575,
-                    618,
-                    131,
-                    91
-                ],
-                "expected": [
-                    "点击关闭"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "关闭活动界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3118,
-                "y": -361
-            }
-        },
-        "post_delay": 2000
+        }
     },
     "关闭活动奖励": {
         "recognition": {
@@ -99,16 +41,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
-            "关闭召唤界面开始"
+            "关闭活动界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3876,
-                "y": -252
+                "x": 3917,
+                "y": -437
             }
-        },
-        "post_delay": 2000
+        }
     },
     "检测活动界面": {
         "recognition": {
@@ -128,18 +70,19 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "关闭活动奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3629,
-                "y": -279
+                "x": 3610,
+                "y": -374
             }
-        },
-        "post_delay": 2000
+        }
     },
     "关闭活动界面": {
+        "post_delay": 2000,
         "next": [
             "检测活动界面"
         ],
@@ -148,13 +91,13 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3356,
-                "y": -130
+                "x": 3363,
+                "y": -135
             }
-        },
-        "post_delay": 2000
+        }
     },
     "关闭召唤界面开始": {
+        "post_delay": 2000,
         "next": [
             "关闭召唤推荐界面"
         ],
@@ -166,8 +109,7 @@
                 "x": 4046,
                 "y": 30
             }
-        },
-        "post_delay": 2000
+        }
     },
     "关闭召唤推荐界面": {
         "recognition": {
@@ -191,30 +133,31 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
-            "新建节点7424254"
+            "关闭召唤推荐界面结束"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4319,
-                "y": -288
+                "x": 4311,
+                "y": -370
             }
-        },
-        "post_delay": 2000
+        }
     },
-    "新建节点7424254": {
+    "关闭召唤推荐界面结束": {
+        "post_delay": 2000,
         "next": [
             "关闭召唤界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4696,
-                "y": -112
+                "x": 4711,
+                "y": -209
             }
-        },
-        "post_delay": 2000
+        }
     },
     "英雄来访节点": {
+        "post_delay": 2000,
         "next": [
             "关闭英雄来访"
         ],
@@ -226,8 +169,7 @@
                 "x": 4319,
                 "y": 255
             }
-        },
-        "post_delay": 2000
+        }
     },
     "关闭英雄来访": {
         "recognition": {
@@ -240,25 +182,27 @@
                     127
                 ],
                 "expected": [
-                    "继续"
+                    "继续",
+                    "关闭"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
-            "到主菜单了吗节点"
+            "关闭英雄来访结束"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4587,
-                "y": 23
+                "x": 4592,
+                "y": -5
             }
-        },
-        "post_delay": 2000
+        }
     },
     "到主菜单了吗节点": {
+        "post_delay": 2000,
         "next": [
             "检测到主菜单了吗"
         ],
@@ -267,11 +211,10 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4907,
-                "y": 180
+                "x": 4910,
+                "y": 224
             }
-        },
-        "post_delay": 2000
+        }
     },
     "检测到主菜单了吗": {
         "recognition": {
@@ -288,28 +231,28 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 5313,
                 "y": 169
             }
-        },
-        "post_delay": 2000
+        }
     },
     "新角色展馆开始": {
+        "post_delay": 2000,
         "next": [
             "关闭新角色展馆"
         ],
         "on_error": [
-            "每日签到开始"
+            "关闭活动界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2146,
-                "y": -181
+                "x": 2218,
+                "y": -201
             }
-        },
-        "post_delay": 2000
+        }
     },
     "关闭新角色展馆": {
         "recognition": {
@@ -332,30 +275,37 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
-            "每日签到开始"
+            "关闭新角色展馆结束"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2360,
-                "y": -509
+                "x": 2376,
+                "y": -642
             }
-        },
-        "post_delay": 2000
+        }
     },
-    "每日签到开始": {
+    "关闭新角色展馆结束": {
         "next": [
-            "检测每日签到"
-        ],
-        "on_error": [
-            "关闭活动界面"
+            "新角色展馆开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2612,
-                "y": -243
+                "x": 2719,
+                "y": -503
             }
-        },
-        "post_delay": 2000
+        }
+    },
+    "关闭英雄来访结束": {
+        "next": [
+            "英雄来访节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4852,
+                "y": -5
+            }
+        }
     }
 }
