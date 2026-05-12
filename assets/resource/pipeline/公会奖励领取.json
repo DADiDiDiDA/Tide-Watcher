@@ -2,16 +2,18 @@
     "$__mpe_config_公会奖励领取": {
         "$__mpe_code": {
             "prefix": "",
+            "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -1048,
-                "y": 205,
-                "zoom": 0.75
+                "x": -903,
+                "y": 178,
+                "zoom": 0.57
             },
             "filename": "公会奖励领取",
-            "version": "v1.5.2"
+            "version": "v1.5.3"
         }
     },
     "开始公会奖励领取": {
+        "post_delay": 2000,
         "next": [
             "进入公会"
         ],
@@ -20,8 +22,7 @@
                 "x": 1095,
                 "y": 62
             }
-        },
-        "post_delay": 2000
+        }
     },
     "进入公会": {
         "recognition": {
@@ -42,6 +43,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始检查是否有公会奖励"
         ],
@@ -50,10 +52,10 @@
                 "x": 1364,
                 "y": 49
             }
-        },
-        "post_delay": 2000
+        }
     },
     "开始检查是否有公会奖励": {
+        "post_delay": 2000,
         "next": [
             "检查是否有公会奖励"
         ],
@@ -65,8 +67,7 @@
                 "x": 1624,
                 "y": 49
             }
-        },
-        "post_delay": 2000
+        }
     },
     "检查是否有公会奖励": {
         "recognition": {
@@ -89,6 +90,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始领取公会奖励"
         ],
@@ -97,10 +99,10 @@
                 "x": 1861,
                 "y": -183
             }
-        },
-        "post_delay": 2000
+        }
     },
     "开始领取公会奖励": {
+        "post_delay": 2000,
         "next": [
             "领取公会奖励"
         ],
@@ -112,8 +114,7 @@
                 "x": 2174,
                 "y": -191
             }
-        },
-        "post_delay": 2000
+        }
     },
     "领取公会奖励": {
         "recognition": {
@@ -133,16 +134,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "确认领取公会奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2515,
-                "y": 1
+                "x": 2714,
+                "y": -356
             }
-        },
-        "post_delay": 2000
+        }
     },
     "公会无奖励；退出": {
         "recognition": {
@@ -162,13 +163,13 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 2354,
                 "y": 277
             }
-        },
-        "post_delay": 2000
+        }
     },
     "确认领取公会奖励": {
         "recognition": {
@@ -188,15 +189,15 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始领取公会奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2775,
-                "y": 1
+                "x": 3076,
+                "y": -47
             }
-        },
-        "post_delay": 2000
+        }
     }
 }

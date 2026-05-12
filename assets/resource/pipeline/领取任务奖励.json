@@ -2,26 +2,27 @@
     "$__mpe_config_领取任务奖励": {
         "$__mpe_code": {
             "prefix": "",
+            "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -4036,
-                "y": -93,
-                "zoom": 0.99
+                "x": -2655,
+                "y": 31,
+                "zoom": 0.65
             },
             "filename": "领取任务奖励",
-            "version": "v1.5.2"
+            "version": "v1.5.3"
         }
     },
     "进入任务界面开始": {
+        "post_delay": 2000,
         "next": [
             "进入任务界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3861,
-                "y": 396
+                "x": 3700,
+                "y": 238
             }
-        },
-        "post_delay": 2000
+        }
     },
     "进入任务界面": {
         "recognition": {
@@ -41,16 +42,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "有没有待领取奖励开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4121,
-                "y": 396
+                "x": 4020,
+                "y": 349
             }
-        },
-        "post_delay": 2000
+        }
     },
     "检查有没有待领取": {
         "recognition": {
@@ -74,18 +75,22 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "领取奖励"
         ],
+        "on_error": [
+            "无待领取返回主菜单"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 4745,
-                "y": 19
+                "x": 4671,
+                "y": -36
             }
-        },
-        "post_delay": 2000
+        }
     },
     "有没有待领取奖励开始": {
+        "post_delay": 2000,
         "next": [
             "检查有没有待领取"
         ],
@@ -94,11 +99,10 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4493,
-                "y": 385
+                "x": 4397,
+                "y": 345
             }
-        },
-        "post_delay": 2000
+        }
     },
     "无待领取返回主菜单": {
         "recognition": {
@@ -118,13 +122,13 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 4862,
                 "y": 561
             }
-        },
-        "post_delay": 2000
+        }
     },
     "领取奖励": {
         "recognition": {
@@ -144,16 +148,19 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "确认任务奖励"
         ],
+        "on_error": [
+            "无待领取返回主菜单"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 5003,
-                "y": 26
+                "x": 4971,
+                "y": -31
             }
-        },
-        "post_delay": 2000
+        }
     },
     "确认任务奖励": {
         "recognition": {
@@ -173,15 +180,15 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "有没有待领取奖励开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5264,
-                "y": 35
+                "x": 5285,
+                "y": 6
             }
-        },
-        "post_delay": 2000
+        }
     }
 }
