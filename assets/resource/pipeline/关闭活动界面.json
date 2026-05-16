@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -3066,
-                "y": -112,
-                "zoom": 0.71
+                "x": -2251,
+                "y": -16,
+                "zoom": 0.57
             },
             "filename": "关闭活动界面",
             "version": "v1.5.3"
@@ -120,10 +120,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    1164,
-                    7,
-                    111,
-                    113
+                    1095,
+                    1,
+                    184,
+                    203
                 ],
                 "template": [
                     "白色叉号.png"
@@ -143,8 +143,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4311,
-                "y": -370
+                "x": 4294,
+                "y": -412
             }
         }
     },
@@ -231,6 +231,9 @@
                 ],
                 "template": [
                     "战役图标.png"
+                ],
+                "threshold": [
+                    0.85
                 ]
             }
         },

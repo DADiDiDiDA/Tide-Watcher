@@ -2,13 +2,14 @@
     "$__mpe_config_航海": {
         "$__mpe_code": {
             "prefix": "",
+            "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -463,
-                "y": 94,
-                "zoom": 0.86
+                "x": 986,
+                "y": 209,
+                "zoom": 0.76
             },
             "filename": "航海",
-            "version": "v1.5.2"
+            "version": "v1.5.3"
         }
     },
     "启航按钮有次数吗": {
@@ -32,6 +33,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "航海结束"
         ],
@@ -43,8 +45,7 @@
                 "x": 916,
                 "y": -64
             }
-        },
-        "post_delay": 2000
+        }
     },
     "航海资源满了领取": {
         "recognition": {
@@ -64,6 +65,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "on_error": [
             "航海检测状态"
         ],
@@ -72,10 +74,10 @@
                 "x": 1097,
                 "y": -306
             }
-        },
-        "post_delay": 2000
+        }
     },
     "航海节点次数检测": {
+        "post_delay": 2000,
         "next": [
             "启航按钮有次数吗"
         ],
@@ -87,8 +89,7 @@
                 "x": 538,
                 "y": 50
             }
-        },
-        "post_delay": 2000
+        }
     },
     "航海节点无次数": {
         "recognition": {
@@ -107,6 +108,7 @@
                 "green_mask": true
             }
         },
+        "post_delay": 2000,
         "next": [
             "航海无次数返回主界面"
         ],
@@ -115,8 +117,7 @@
                 "x": 923,
                 "y": 225
             }
-        },
-        "post_delay": 2000
+        }
     },
     "航海无次数返回主界面": {
         "recognition": {
@@ -136,22 +137,22 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 1472,
                 "y": 174
             }
-        },
-        "post_delay": 2000
+        }
     },
     "航海结束": {
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 1363,
                 "y": -76
             }
-        },
-        "post_delay": 2000
+        }
     },
     "航海启动": {
         "action": {
@@ -175,16 +176,16 @@
         },
         "repeat": 3,
         "repeat_delay": 1500,
+        "post_delay": 2000,
         "next": [
-            "航海检测状态"
+            "航海滑动屏幕启动"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -498,
-                "y": -83
+                "x": -701,
+                "y": -104
             }
-        },
-        "post_delay": 2000
+        }
     },
     "检测航海状态": {
         "recognition": {
@@ -205,6 +206,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "航海节点次数检测"
         ],
@@ -216,8 +218,7 @@
                 "x": 185,
                 "y": -6
             }
-        },
-        "post_delay": 2000
+        }
     },
     "是不是航海资源满了_结束": {
         "recognition": {
@@ -237,6 +238,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "航海资源满了领取"
         ],
@@ -245,10 +247,10 @@
                 "x": 698,
                 "y": -463
             }
-        },
-        "post_delay": 2000
+        }
     },
     "航海检测状态": {
+        "post_delay": 2000,
         "next": [
             "检测航海状态"
         ],
@@ -260,7 +262,38 @@
                 "x": -89,
                 "y": -173
             }
+        }
+    },
+    "航海滑动屏幕启动": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    180,
+                    560,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        779,
+                        283,
+                        1,
+                        1
+                    ]
+                ]
+            }
         },
-        "post_delay": 2000
+        "repeat": 3,
+        "post_delay": 2000,
+        "next": [
+            "航海检测状态"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -403,
+                "y": -117
+            }
+        }
     }
 }

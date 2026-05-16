@@ -2,16 +2,18 @@
     "$__mpe_config_分解角色": {
         "$__mpe_code": {
             "prefix": "",
+            "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -2700,
-                "y": 32,
-                "zoom": 0.65
+                "x": -2451,
+                "y": 52,
+                "zoom": 0.57
             },
             "filename": "分解角色",
-            "version": "v1.5.2"
+            "version": "v1.5.3"
         }
     },
-    "新建节点153732": {
+    "开始选择一星二星三星角色": {
+        "post_delay": 2000,
         "next": [
             "选择一星二星三星角色",
             "开始遣散角色"
@@ -21,11 +23,10 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4468,
-                "y": 198
+                "x": 4508,
+                "y": 156
             }
-        },
-        "post_delay": 2000
+        }
     },
     "开始遣散角色": {
         "recognition": {
@@ -45,6 +46,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "确认遣返角色节点"
         ],
@@ -53,8 +55,7 @@
                 "x": 4869,
                 "y": 407
             }
-        },
-        "post_delay": 2000
+        }
     },
     "确认遣散角色": {
         "recognition": {
@@ -74,6 +75,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "领取遣散奖励开始"
         ],
@@ -82,8 +84,7 @@
                 "x": 5312,
                 "y": 40
             }
-        },
-        "post_delay": 2000
+        }
     },
     "领取遣散奖励": {
         "recognition": {
@@ -103,6 +104,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "返回到主菜单分解角色"
         ],
@@ -111,8 +113,7 @@
                 "x": 5945,
                 "y": 12
             }
-        },
-        "post_delay": 2000
+        }
     },
     "返回到主菜单分解角色": {
         "recognition": {
@@ -132,15 +133,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 5828,
                 "y": 393
             }
-        },
-        "post_delay": 2000
+        }
     },
     "分解角色开始节点": {
+        "post_delay": 2000,
         "next": [
             "进入角色界面"
         ],
@@ -149,8 +151,7 @@
                 "x": 3621,
                 "y": 372
             }
-        },
-        "post_delay": 2000
+        }
     },
     "进入角色界面": {
         "recognition": {
@@ -170,6 +171,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "进入分解界面"
         ],
@@ -178,8 +180,7 @@
                 "x": 3948,
                 "y": 337
             }
-        },
-        "post_delay": 2000
+        }
     },
     "进入分解界面": {
         "recognition": {
@@ -199,16 +200,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
-            "新建节点153732"
+            "开始选择一星二星三星角色"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 4232,
                 "y": 311
             }
-        },
-        "post_delay": 2000
+        }
     },
     "选择一星二星三星角色": {
         "recognition": {
@@ -228,18 +229,19 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
-            "新建节点153732"
+            "开始选择一星二星三星角色"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 4875,
                 "y": -58
             }
-        },
-        "post_delay": 2000
+        }
     },
     "确认遣返角色节点": {
+        "post_delay": 2000,
         "next": [
             "确认遣散角色"
         ],
@@ -251,10 +253,10 @@
                 "x": 5048,
                 "y": 204
             }
-        },
-        "post_delay": 2000
+        }
     },
     "领取遣散奖励开始": {
+        "post_delay": 2000,
         "next": [
             "领取遣散奖励"
         ],
@@ -266,7 +268,6 @@
                 "x": 5572,
                 "y": 40
             }
-        },
-        "post_delay": 2000
+        }
     }
 }
