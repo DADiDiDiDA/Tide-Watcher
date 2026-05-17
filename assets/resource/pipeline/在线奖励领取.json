@@ -4,44 +4,94 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -1858,
-                "y": 131,
-                "zoom": 0.57
+                "x": -2002,
+                "y": 447,
+                "zoom": 0.65
             },
             "filename": "在线奖励领取",
             "version": "v1.5.3"
         }
     },
-    "开始在线奖励领取": {
-        "post_delay": 2000,
-        "next": [
-            "在线奖励领取"
-        ],
-        "on_error": [
-            "在线奖励领取结束"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3135,
-                "y": 160
-            }
-        }
-    },
-    "在线奖励领取": {
+    "90min奖励可以领取了吗": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    630,
-                    151,
-                    157,
-                    108
+                    998,
+                    288,
+                    92,
+                    75
                 ],
                 "template": [
-                    "待领取图标.png"
+                    "充满的槽位.png"
                 ],
+                "green_mask": true,
                 "threshold": [
                     0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    48,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "领取了90min奖励开始关闭每日在线奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3707,
+                "y": -271
+            }
+        }
+    },
+    "90min在线奖励领取了吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    993,
+                    331,
+                    107,
+                    124
+                ],
+                "template": [
+                    "90min在线奖励已领取图标.png"
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "next": [
+            "退出在线奖励菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3748,
+                "y": -596
+            }
+        }
+    },
+    "领取了90min奖励开始关闭每日在线奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    580,
+                    618,
+                    123,
+                    100
+                ],
+                "expected": [
+                    "关闭"
                 ]
             }
         },
@@ -50,35 +100,520 @@
         },
         "post_delay": 2000,
         "next": [
-            "领取在线奖励第一次"
+            "退出在线奖励菜单"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3434,
-                "y": -73
+                "x": 4242,
+                "y": -153
             }
         }
     },
-    "领取在线奖励第一次": {
-        "action": {
-            "type": "Click",
+    "60min奖励可以领取了吗": {
+        "recognition": {
+            "type": "TemplateMatch",
             "param": {
-                "target": [
-                    1029,
-                    358,
-                    45,
-                    45
+                "roi": [
+                    854,
+                    278,
+                    107,
+                    114
+                ],
+                "template": [
+                    "充满的槽位.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.6
                 ]
             }
         },
-        "post_delay": 2000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    48,
+                    0,
+                    0
+                ]
+            }
+        },
         "next": [
-            "领取在线奖励第二次"
+            "领取了60min奖励开始关闭每日在线奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3735,
-                "y": -11
+                "x": 3951,
+                "y": 256
+            }
+        }
+    },
+    "开始查看90min奖励": {
+        "next": [
+            "90min在线奖励领取了吗"
+        ],
+        "on_error": [
+            "开始查看90min奖励可以领取吗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2784,
+                "y": -241
+            }
+        }
+    },
+    "开始查看60min奖励": {
+        "next": [
+            "60min在线奖励领取了吗"
+        ],
+        "on_error": [
+            "开始查看60min奖励可以领取吗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2729,
+                "y": 665
+            }
+        }
+    },
+    "开始查看40min奖励": {
+        "next": [
+            "40min在线奖励领取了吗"
+        ],
+        "on_error": [
+            "开始查看40min奖励可以领取吗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2691,
+                "y": 1049
+            }
+        }
+    },
+    "开始查看20min奖励": {
+        "next": [
+            "20min在线奖励领取了吗"
+        ],
+        "on_error": [
+            "开始查看20min奖励可以领取吗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2765,
+                "y": 1469
+            }
+        }
+    },
+    "开始查看5min奖励": {
+        "next": [
+            "5min在线奖励领取了吗"
+        ],
+        "on_error": [
+            "开始查看5min奖励可以领取吗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2710,
+                "y": 1975
+            }
+        }
+    },
+    "40min奖励可以领取了吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    730,
+                    256,
+                    102,
+                    139
+                ],
+                "template": [
+                    "充满的槽位.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    48,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "领取了40min奖励开始关闭每日在线奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3969,
+                "y": 675
+            }
+        }
+    },
+    "20min奖励可以领取了吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    589,
+                    248,
+                    102,
+                    138
+                ],
+                "template": [
+                    "充满的槽位.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    48,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "领取了20min奖励开始关闭每日在线奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4006,
+                "y": 1190
+            }
+        }
+    },
+    "5min奖励可以领取了吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    441,
+                    262,
+                    104,
+                    120
+                ],
+                "template": [
+                    "充满的槽位.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    48,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "领取了5min奖励开始关闭每日在线奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4013,
+                "y": 1783
+            }
+        }
+    },
+    "领取了5min奖励开始关闭每日在线奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    580,
+                    618,
+                    123,
+                    100
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "退出在线奖励菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4462,
+                "y": 1659
+            }
+        }
+    },
+    "领取了40min奖励开始关闭每日在线奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    580,
+                    618,
+                    123,
+                    100
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "退出在线奖励菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4340,
+                "y": 558
+            }
+        }
+    },
+    "领取了20min奖励开始关闭每日在线奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    580,
+                    618,
+                    123,
+                    100
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "退出在线奖励菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4437,
+                "y": 1126
+            }
+        }
+    },
+    "40min在线奖励领取了吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    712,
+                    319,
+                    123,
+                    134
+                ],
+                "template": [
+                    "40min在线奖励已领取图标.png"
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "next": [
+            "退出在线奖励菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3430,
+                "y": 573
+            }
+        }
+    },
+    "20min在线奖励领取了吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    585,
+                    332,
+                    102,
+                    110
+                ],
+                "template": [
+                    "20min在线奖励已领取图标.png"
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "next": [
+            "退出在线奖励菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3367,
+                "y": 1081
+            }
+        }
+    },
+    "60min在线奖励领取了吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    849,
+                    329,
+                    115,
+                    156
+                ],
+                "template": [
+                    "60min在线奖励已领取图标.png"
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "next": [
+            "退出在线奖励菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3491,
+                "y": 81
+            }
+        }
+    },
+    "5min在线奖励领取了吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    993,
+                    331,
+                    107,
+                    124
+                ],
+                "template": [
+                    "5min在线奖励已领取图标.png"
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "next": [
+            "退出在线奖励菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3423,
+                "y": 1588
+            }
+        }
+    },
+    "开始查看90min奖励可以领取吗": {
+        "next": [
+            "90min奖励可以领取了吗"
+        ],
+        "on_error": [
+            "开始查看60min奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3285,
+                "y": -72
+            }
+        }
+    },
+    "开始查看60min奖励可以领取吗": {
+        "next": [
+            "60min奖励可以领取了吗"
+        ],
+        "on_error": [
+            "开始查看40min奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3486,
+                "y": 417
+            }
+        }
+    },
+    "开始查看40min奖励可以领取吗": {
+        "next": [
+            "40min奖励可以领取了吗"
+        ],
+        "on_error": [
+            "开始查看20min奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3344,
+                "y": 895
+            }
+        }
+    },
+    "开始查看5min奖励可以领取吗": {
+        "next": [
+            "5min奖励可以领取了吗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3396,
+                "y": 1958
+            }
+        }
+    },
+    "开始查看20min奖励可以领取吗": {
+        "next": [
+            "20min奖励可以领取了吗"
+        ],
+        "on_error": [
+            "开始查看5min奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3327,
+                "y": 1395
+            }
+        }
+    },
+    "开始在线奖励领取": {
+        "post_delay": 2000,
+        "next": [
+            "开始查看90min奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2377,
+                "y": -290
             }
         }
     },
@@ -106,77 +641,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4839,
-                "y": 127
-            }
-        }
-    },
-    "领取在线奖励第二次": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    894,
-                    366,
-                    39,
-                    36
-                ]
-            }
-        },
-        "post_delay": 2000,
-        "next": [
-            "领取在线奖励第三次"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4031,
-                "y": -18
-            }
-        }
-    },
-    "领取在线奖励第三次": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    761,
-                    372,
-                    42,
-                    32
-                ]
-            }
-        },
-        "post_delay": 2000,
-        "next": [
-            "领取在线奖励第四次"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4319,
-                "y": 16
-            }
-        }
-    },
-    "领取在线奖励第四次": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1029,
-                    364,
-                    44,
-                    37
-                ]
-            }
-        },
-        "post_delay": 2000,
-        "next": [
-            "退出在线奖励菜单"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4600,
-                "y": -2
+                "x": 5186,
+                "y": 265
             }
         }
     },
@@ -184,8 +650,37 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 4676,
-                "y": 445
+                "x": 5626,
+                "y": 262
+            }
+        }
+    },
+    "领取了60min奖励开始关闭每日在线奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    580,
+                    618,
+                    123,
+                    100
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "退出在线奖励菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4380,
+                "y": 315
             }
         }
     }

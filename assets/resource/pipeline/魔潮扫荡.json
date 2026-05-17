@@ -2,16 +2,18 @@
     "$__mpe_config_魔潮扫荡": {
         "$__mpe_code": {
             "prefix": "",
+            "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -4914,
-                "y": -159,
-                "zoom": 0.87
+                "x": -3445,
+                "y": -171,
+                "zoom": 1
             },
             "filename": "魔潮扫荡",
-            "version": "v1.5.2"
+            "version": "v1.5.3"
         }
     },
     "魔潮扫荡开始节点": {
+        "post_delay": 2000,
         "next": [
             "进入挑战要塞魔潮"
         ],
@@ -20,10 +22,10 @@
                 "x": 3498,
                 "y": 344
             }
-        },
-        "post_delay": 2000
+        }
     },
     "检测魔潮扫荡图标": {
+        "post_delay": 2000,
         "next": [
             "有没有扫荡按键"
         ],
@@ -35,8 +37,7 @@
                 "x": 4604,
                 "y": 299
             }
-        },
-        "post_delay": 2000
+        }
     },
     "无可用次数回到主菜单魔潮": {
         "recognition": {
@@ -56,13 +57,13 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 6563,
                 "y": 467
             }
-        },
-        "post_delay": 2000
+        }
     },
     "无可用次数返回魔潮": {
         "recognition": {
@@ -111,6 +112,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "确认开始魔潮扫荡"
         ],
@@ -119,10 +121,10 @@
                 "x": 4951,
                 "y": 181
             }
-        },
-        "post_delay": 2000
+        }
     },
     "领取魔潮扫荡奖励节点": {
+        "post_delay": 2000,
         "next": [
             "领取魔潮奖励"
         ],
@@ -131,8 +133,7 @@
                 "x": 5648,
                 "y": 182
             }
-        },
-        "post_delay": 2000
+        }
     },
     "进入挑战要塞魔潮": {
         "recognition": {
@@ -152,24 +153,24 @@
         "action": {
             "type": "Click",
             "param": {
-                "target_offset": [
-                    0,
-                    -20,
-                    0,
-                    0
+                "target": [
+                    981,
+                    483,
+                    21,
+                    50
                 ]
             }
         },
+        "post_delay": 2000,
         "next": [
             "进入菜单选择"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3833,
-                "y": 329
+                "x": 3798,
+                "y": 336
             }
-        },
-        "post_delay": 2000
+        }
     },
     "进入菜单选择": {
         "recognition": {
@@ -190,6 +191,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "选择魔潮"
         ],
@@ -198,8 +200,7 @@
                 "x": 4093,
                 "y": 329
             }
-        },
-        "post_delay": 2000
+        }
     },
     "选择魔潮": {
         "recognition": {
@@ -219,6 +220,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "检测魔潮扫荡图标"
         ],
@@ -227,8 +229,7 @@
                 "x": 4353,
                 "y": 329
             }
-        },
-        "post_delay": 2000
+        }
     },
     "领取魔潮奖励": {
         "recognition": {
@@ -248,6 +249,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "无可用次数返回魔潮"
         ],
@@ -256,10 +258,10 @@
                 "x": 5916,
                 "y": 296
             }
-        },
-        "post_delay": 2000
+        }
     },
     "确认开始魔潮扫荡": {
+        "post_delay": 2000,
         "next": [
             "确认不使用剩余次数"
         ],
@@ -268,8 +270,7 @@
                 "x": 5126,
                 "y": 10
             }
-        },
-        "post_delay": 2000
+        }
     },
     "确认不使用剩余次数": {
         "recognition": {
@@ -289,6 +290,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "领取魔潮扫荡奖励节点"
         ],
@@ -297,7 +299,6 @@
                 "x": 5385,
                 "y": 14
             }
-        },
-        "post_delay": 2000
+        }
     }
 }

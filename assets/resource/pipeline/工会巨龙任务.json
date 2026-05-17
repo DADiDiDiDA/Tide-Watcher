@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -244,
-                "y": 117,
-                "zoom": 0.49
+                "x": 271,
+                "y": 29,
+                "zoom": 0.76
             },
             "filename": "工会巨龙任务",
             "version": "v1.5.3"
@@ -130,11 +130,11 @@
         "action": {
             "type": "Click",
             "param": {
-                "target_offset": [
-                    0,
-                    -20,
-                    0,
-                    0
+                "target": [
+                    980,
+                    480,
+                    27,
+                    53
                 ]
             }
         },

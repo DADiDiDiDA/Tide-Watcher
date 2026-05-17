@@ -2,13 +2,14 @@
     "$__mpe_config_每周交易所交易": {
         "$__mpe_code": {
             "prefix": "",
+            "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -3428,
-                "y": 295,
-                "zoom": 0.73
+                "x": -3364,
+                "y": 279,
+                "zoom": 0.76
             },
             "filename": "每周交易所交易",
-            "version": "v1.5.2"
+            "version": "v1.5.3"
         }
     },
     "每周交易所交易开始": {
@@ -31,10 +32,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    596,
-                    52,
-                    121,
-                    157
+                    628,
+                    65,
+                    87,
+                    87
                 ],
                 "template": [
                     "资源已满.png"
