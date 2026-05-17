@@ -4,12 +4,57 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -2002,
-                "y": 447,
-                "zoom": 0.65
+                "x": -1006,
+                "y": 502,
+                "zoom": 0.53
             },
             "filename": "在线奖励领取",
             "version": "v1.5.3"
+        }
+    },
+    "在线奖励有奖励待领取吗": {
+        "next": [
+            "查看在线奖励有奖励吗"
+        ],
+        "on_error": [
+            "在线奖励领取结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1901,
+                "y": -410
+            }
+        }
+    },
+    "查看在线奖励有奖励吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    630,
+                    151,
+                    157,
+                    108
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始查看90min奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2353,
+                "y": -510
+            }
         }
     },
     "90min奖励可以领取了吗": {
@@ -608,12 +653,12 @@
     "开始在线奖励领取": {
         "post_delay": 2000,
         "next": [
-            "开始查看90min奖励"
+            "在线奖励有奖励待领取吗"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2377,
-                "y": -290
+                "x": 1519,
+                "y": -468
             }
         }
     },
