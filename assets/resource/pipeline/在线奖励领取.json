@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -1006,
-                "y": 502,
-                "zoom": 0.53
+                "x": -2108,
+                "y": 116,
+                "zoom": 0.5
             },
             "filename": "在线奖励领取",
             "version": "v1.5.3"
@@ -682,7 +682,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "在线奖励领取结束"
+            "开始第二次退出在线奖励菜单"
         ],
         "$__mpe_code": {
             "position": {
@@ -695,8 +695,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 5626,
-                "y": 262
+                "x": 6307,
+                "y": 70
             }
         }
     },
@@ -726,6 +726,49 @@
             "position": {
                 "x": 4380,
                 "y": 315
+            }
+        }
+    },
+    "开始第二次退出在线奖励菜单": {
+        "next": [
+            "第二次退出在线奖励菜单"
+        ],
+        "on_error": [
+            "在线奖励领取结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5529,
+                "y": 421
+            }
+        }
+    },
+    "第二次退出在线奖励菜单": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    578,
+                    597,
+                    125,
+                    116
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "在线奖励领取结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5811,
+                "y": 109
             }
         }
     }
