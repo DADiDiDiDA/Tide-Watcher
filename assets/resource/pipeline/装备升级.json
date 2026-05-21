@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -2219,
-                "y": 185,
-                "zoom": 0.49
+                "x": -4517,
+                "y": 184,
+                "zoom": 0.44
             },
             "filename": "装备升级",
             "version": "v1.5.3"
@@ -393,14 +393,17 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 2000,
+        "post_delay": 3000,
         "next": [
             "退出背包界面强化装备"
         ],
+        "on_error": [
+            "再尝试一次退出背包"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 10780,
-                "y": 384
+                "x": 10808,
+                "y": 288
             }
         }
     },
@@ -562,11 +565,14 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 2000,
+        "post_delay": 3000,
+        "next": [
+            "再尝试一次退出背包"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 11046,
-                "y": 409
+                "x": 11211,
+                "y": 112
             }
         }
     },
@@ -873,6 +879,57 @@
             "position": {
                 "x": 4501,
                 "y": -120
+            }
+        }
+    },
+    "再尝试一次退出背包": {
+        "next": [
+            "退出背包界面强化装备_副本1"
+        ],
+        "on_error": [
+            "退出背包结束强化装备"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 11521,
+                "y": 422
+            }
+        }
+    },
+    "退出背包界面强化装备_副本1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1,
+                    3,
+                    76,
+                    50
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "退出背包结束强化装备"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 11789,
+                "y": 80
+            }
+        }
+    },
+    "退出背包结束强化装备": {
+        "$__mpe_code": {
+            "position": {
+                "x": 12165,
+                "y": 346
             }
         }
     }
