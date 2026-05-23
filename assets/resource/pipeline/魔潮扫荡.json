@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -3445,
-                "y": -171,
-                "zoom": 1
+                "x": -4488,
+                "y": -77,
+                "zoom": 0.75
             },
             "filename": "魔潮扫荡",
             "version": "v1.5.3"
@@ -58,10 +58,16 @@
             "type": "Click"
         },
         "post_delay": 2000,
+        "next": [
+            "无可用次数回到主菜单魔潮_副本1"
+        ],
+        "on_error": [
+            "魔潮扫荡结束"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 6563,
-                "y": 467
+                "x": 6663,
+                "y": 328
             }
         }
     },
@@ -298,6 +304,43 @@
             "position": {
                 "x": 5385,
                 "y": 14
+            }
+        }
+    },
+    "无可用次数回到主菜单魔潮_副本1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    7,
+                    5,
+                    78,
+                    50
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "魔潮扫荡结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7111,
+                "y": 160
+            }
+        }
+    },
+    "魔潮扫荡结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 7528,
+                "y": 413
             }
         }
     }
