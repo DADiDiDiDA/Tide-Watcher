@@ -3,23 +3,39 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1779525163336,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\分解角色.json",
             "savedViewport": {
-                "x": -3343,
-                "y": 74,
-                "zoom": 0.57
+                "x": -3049,
+                "y": 147,
+                "zoom": 0.65
             },
             "filename": "分解角色",
             "version": "v1.5.3"
         }
     },
+    "分解角色开始节点": {
+        "post_delay": 2000,
+        "next": [
+            "进入角色界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3621,
+                "y": 372
+            }
+        }
+    },
     "开始选择一星二星三星角色": {
         "post_delay": 2000,
+        "timeout": 2000,
         "next": [
             "选择一星二星三星角色",
             "开始遣散角色"
         ],
         "on_error": [
-            "开始返回到主菜单分解角色"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -52,8 +68,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4869,
-                "y": 407
+                "x": 4788,
+                "y": 111
             }
         }
     },
@@ -81,90 +97,24 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5312,
-                "y": 40
+                "x": 5437,
+                "y": -26
             }
         }
     },
-    "领取遣散奖励": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    575,
-                    664,
-                    139,
-                    52
-                ],
-                "expected": [
-                    "关闭"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
+    "确认遣返角色节点": {
         "post_delay": 2000,
+        "timeout": 2000,
         "next": [
-            "开始返回到主菜单分解角色"
+            "确认遣散角色"
+        ],
+        "on_error": [
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5945,
-                "y": 12
-            }
-        }
-    },
-    "开始返回到主菜单分解角色": {
-        "post_delay": 2000,
-        "next": [
-            "返回到主菜单分解角色"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6459,
-                "y": 420
-            }
-        }
-    },
-    "分解角色开始节点": {
-        "post_delay": 2000,
-        "next": [
-            "进入角色界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3621,
-                "y": 372
-            }
-        }
-    },
-    "进入角色界面": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    857,
-                    585,
-                    97,
-                    99
-                ],
-                "template": [
-                    "英雄图标.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "next": [
-            "进入分解界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3948,
-                "y": 337
+                "x": 5044,
+                "y": 117
             }
         }
     },
@@ -197,6 +147,35 @@
             }
         }
     },
+    "进入角色界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    857,
+                    585,
+                    97,
+                    99
+                ],
+                "template": [
+                    "英雄图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "进入分解界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3948,
+                "y": 337
+            }
+        }
+    },
     "选择一星二星三星角色": {
         "recognition": {
             "type": "TemplateMatch",
@@ -221,23 +200,37 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4875,
-                "y": -58
+                "x": 4858,
+                "y": -158
             }
         }
     },
-    "确认遣返角色节点": {
+    "领取遣散奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    575,
+                    664,
+                    139,
+                    52
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
         "post_delay": 2000,
         "next": [
-            "确认遣散角色"
-        ],
-        "on_error": [
-            "开始返回到主菜单分解角色"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5048,
-                "y": 204
+                "x": 6247,
+                "y": -17
             }
         }
     },
@@ -247,92 +240,20 @@
             "领取遣散奖励"
         ],
         "on_error": [
-            "开始返回到主菜单分解角色"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5572,
-                "y": 40
+                "x": 5793,
+                "y": 32
             }
         }
     },
-    "返回到主菜单分解角色": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    2,
-                    3,
-                    74,
-                    48
-                ],
-                "template": [
-                    "矮人超市退出.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "next": [
-            "尝试返回主界面第二次分解角色"
-        ],
+    "$__mpe_external_返回主界面开始_分解角色": {
         "$__mpe_code": {
             "position": {
-                "x": 6773,
-                "y": 52
-            }
-        }
-    },
-    "返回到主菜单分解角色第二次": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    2,
-                    3,
-                    74,
-                    48
-                ],
-                "template": [
-                    "矮人超市退出.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "next": [
-            "分解角色任务结束"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 7504,
-                "y": 45
-            }
-        }
-    },
-    "尝试返回主界面第二次分解角色": {
-        "next": [
-            "返回到主菜单分解角色第二次"
-        ],
-        "on_error": [
-            "分解角色任务结束"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 7166,
-                "y": 249
-            }
-        }
-    },
-    "分解角色任务结束": {
-        "$__mpe_code": {
-            "position": {
-                "x": 7883,
-                "y": 317
+                "x": 6712,
+                "y": 513
             }
         }
     }

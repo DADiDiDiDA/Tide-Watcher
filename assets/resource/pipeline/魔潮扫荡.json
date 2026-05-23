@@ -3,101 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1779526890523,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\魔潮扫荡.json",
             "savedViewport": {
-                "x": -4488,
-                "y": -77,
-                "zoom": 0.75
+                "x": -2973,
+                "y": -53,
+                "zoom": 0.65
             },
             "filename": "魔潮扫荡",
             "version": "v1.5.3"
-        }
-    },
-    "魔潮扫荡开始节点": {
-        "post_delay": 2000,
-        "next": [
-            "进入挑战要塞魔潮"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3498,
-                "y": 344
-            }
-        }
-    },
-    "检测魔潮扫荡图标": {
-        "post_delay": 2000,
-        "next": [
-            "有没有扫荡按键"
-        ],
-        "on_error": [
-            "无可用次数返回魔潮"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4604,
-                "y": 299
-            }
-        }
-    },
-    "无可用次数回到主菜单魔潮": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    7,
-                    5,
-                    78,
-                    50
-                ],
-                "template": [
-                    "矮人超市退出.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "next": [
-            "无可用次数回到主菜单魔潮_副本1"
-        ],
-        "on_error": [
-            "魔潮扫荡结束"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6663,
-                "y": 328
-            }
-        }
-    },
-    "无可用次数返回魔潮": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    7,
-                    5,
-                    78,
-                    50
-                ],
-                "template": [
-                    "矮人超市退出.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "next": [
-            "无可用次数回到主菜单魔潮"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6215,
-                "y": 501
-            }
         }
     },
     "有没有扫荡按键": {
@@ -124,20 +39,65 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4951,
-                "y": 181
+                "x": 4828,
+                "y": 101
             }
         }
     },
-    "领取魔潮扫荡奖励节点": {
+    "检测魔潮扫荡图标": {
         "post_delay": 2000,
+        "timeout": 2000,
         "next": [
-            "领取魔潮奖励"
+            "有没有扫荡按键"
+        ],
+        "on_error": [
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5648,
-                "y": 182
+                "x": 4604,
+                "y": 299
+            }
+        }
+    },
+    "确认不使用剩余次数": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    670,
+                    436,
+                    202,
+                    52
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "领取魔潮扫荡奖励节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5385,
+                "y": 14
+            }
+        }
+    },
+    "确认开始魔潮扫荡": {
+        "post_delay": 2000,
+        "next": [
+            "确认不使用剩余次数"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5126,
+                "y": 10
             }
         }
     },
@@ -173,8 +133,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3798,
-                "y": 336
+                "x": 3710,
+                "y": 308
             }
         }
     },
@@ -203,8 +163,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4093,
-                "y": 329
+                "x": 4035,
+                "y": 304
             }
         }
     },
@@ -232,8 +192,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4353,
-                "y": 329
+                "x": 4313,
+                "y": 311
             }
         }
     },
@@ -257,7 +217,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "无可用次数返回魔潮"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -266,81 +226,35 @@
             }
         }
     },
-    "确认开始魔潮扫荡": {
+    "领取魔潮扫荡奖励节点": {
         "post_delay": 2000,
         "next": [
-            "确认不使用剩余次数"
+            "领取魔潮奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5126,
-                "y": 10
+                "x": 5648,
+                "y": 182
             }
         }
     },
-    "确认不使用剩余次数": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    670,
-                    436,
-                    202,
-                    52
-                ],
-                "expected": [
-                    "确定"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
+    "魔潮扫荡开始节点": {
         "post_delay": 2000,
         "next": [
-            "领取魔潮扫荡奖励节点"
+            "进入挑战要塞魔潮"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5385,
-                "y": 14
+                "x": 3343,
+                "y": 304
             }
         }
     },
-    "无可用次数回到主菜单魔潮_副本1": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    7,
-                    5,
-                    78,
-                    50
-                ],
-                "template": [
-                    "矮人超市退出.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "next": [
-            "魔潮扫荡结束"
-        ],
+    "$__mpe_external_返回主界面开始_魔潮扫荡": {
         "$__mpe_code": {
             "position": {
-                "x": 7111,
-                "y": 160
-            }
-        }
-    },
-    "魔潮扫荡结束": {
-        "$__mpe_code": {
-            "position": {
-                "x": 7528,
-                "y": 413
+                "x": 6484,
+                "y": 722
             }
         }
     }

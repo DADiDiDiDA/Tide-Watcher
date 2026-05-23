@@ -3,24 +3,97 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1779526880764,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\领取任务奖励.json",
             "savedViewport": {
-                "x": -2655,
-                "y": 31,
-                "zoom": 0.65
+                "x": -3046,
+                "y": -9,
+                "zoom": 0.75
             },
             "filename": "领取任务奖励",
             "version": "v1.5.3"
         }
     },
-    "进入任务界面开始": {
+    "有没有待领取奖励开始": {
         "post_delay": 2000,
+        "timeout": 3000,
         "next": [
-            "进入任务界面"
+            "检查有没有待领取"
+        ],
+        "on_error": [
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3700,
-                "y": 238
+                "x": 4397,
+                "y": 345
+            }
+        }
+    },
+    "检查有没有待领取": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    234,
+                    84,
+                    28,
+                    350
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "timeout": 2000,
+        "next": [
+            "领取奖励"
+        ],
+        "on_error": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4650,
+                "y": -53
+            }
+        }
+    },
+    "确认任务奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    583,
+                    664,
+                    123,
+                    44
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "有没有待领取奖励开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5317,
+                "y": 19
             }
         }
     },
@@ -53,80 +126,15 @@
             }
         }
     },
-    "检查有没有待领取": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    234,
-                    84,
-                    28,
-                    350
-                ],
-                "template": [
-                    "待领取图标.png"
-                ],
-                "green_mask": true,
-                "threshold": [
-                    0.6
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
+    "进入任务界面开始": {
         "post_delay": 2000,
         "next": [
-            "领取奖励"
-        ],
-        "on_error": [
-            "无待领取返回主菜单"
+            "进入任务界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4671,
-                "y": -36
-            }
-        }
-    },
-    "有没有待领取奖励开始": {
-        "post_delay": 2000,
-        "next": [
-            "检查有没有待领取"
-        ],
-        "on_error": [
-            "无待领取返回主菜单"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4397,
-                "y": 345
-            }
-        }
-    },
-    "无待领取返回主菜单": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    4,
-                    5,
-                    84,
-                    50
-                ],
-                "template": [
-                    "矮人超市退出.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": 4862,
-                "y": 561
+                "x": 3700,
+                "y": 238
             }
         }
     },
@@ -149,11 +157,12 @@
             "type": "Click"
         },
         "post_delay": 2000,
+        "timeout": 2000,
         "next": [
             "确认任务奖励"
         ],
         "on_error": [
-            "无待领取返回主菜单"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -162,32 +171,11 @@
             }
         }
     },
-    "确认任务奖励": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    583,
-                    664,
-                    123,
-                    44
-                ],
-                "expected": [
-                    "关闭"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "next": [
-            "有没有待领取奖励开始"
-        ],
+    "$__mpe_external_返回主界面开始_领取任务奖励": {
         "$__mpe_code": {
             "position": {
-                "x": 5285,
-                "y": 6
+                "x": 5344,
+                "y": 682
             }
         }
     }

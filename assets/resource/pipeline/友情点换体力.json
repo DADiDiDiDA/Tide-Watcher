@@ -2,120 +2,32 @@
     "$__mpe_config_友情点换体力": {
         "$__mpe_code": {
             "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1779525767668,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\友情点换体力.json",
             "savedViewport": {
-                "x": -1580,
-                "y": 83,
-                "zoom": 0.75
+                "x": -2037,
+                "y": 284,
+                "zoom": 0.65
             },
             "filename": "友情点换体力",
-            "version": "v1.5.2"
+            "version": "v1.5.3"
         }
     },
     "开始返回上一级换体力": {
         "post_delay": 2000,
+        "timeout": 2000,
         "next": [
             "返回上一级换体力"
         ],
         "on_error": [
-            "检查是否在主界面换体力"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 3728,
                 "y": -210
-            }
-        }
-    },
-    "返回上一级换体力结束": {
-        "post_delay": 2000,
-        "next": [
-            "开始返回上一级换体力"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4421,
-                "y": -127
-            }
-        }
-    },
-    "检查是否在主界面换体力": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    963,
-                    586,
-                    314,
-                    105
-                ],
-                "template": [
-                    "战役图标.png"
-                ]
-            }
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": 4333,
-                "y": 141
-            }
-        }
-    },
-    "点击增加体力图标": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    598,
-                    16,
-                    82,
-                    32
-                ],
-                "template": [
-                    "体力右边的小加号.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "next": [
-            "进入更换界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2535,
-                "y": 205
-            }
-        }
-    },
-    "进入更换界面": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    1028,
-                    508,
-                    68,
-                    31
-                ],
-                "expected": [
-                    "150"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "next": [
-            "换体力开始"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2803,
-                "y": 48
             }
         }
     },
@@ -160,6 +72,35 @@
             }
         }
     },
+    "点击增加体力图标": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    598,
+                    16,
+                    82,
+                    32
+                ],
+                "template": [
+                    "体力右边的小加号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "进入更换界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2535,
+                "y": 205
+            }
+        }
+    },
     "返回上一级换体力": {
         "recognition": {
             "type": "OCR",
@@ -186,6 +127,55 @@
             "position": {
                 "x": 4118,
                 "y": -393
+            }
+        }
+    },
+    "返回上一级换体力结束": {
+        "post_delay": 2000,
+        "next": [
+            "开始返回上一级换体力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4421,
+                "y": -127
+            }
+        }
+    },
+    "进入更换界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1028,
+                    508,
+                    68,
+                    31
+                ],
+                "expected": [
+                    "150"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "换体力开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2803,
+                "y": 48
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_友情点换体力": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4234,
+                "y": 161
             }
         }
     }

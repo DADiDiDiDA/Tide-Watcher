@@ -2,13 +2,17 @@
     "$__mpe_config_矿场": {
         "$__mpe_code": {
             "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1779526663638,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\矿场.json",
             "savedViewport": {
-                "x": 181,
-                "y": 153,
-                "zoom": 1
+                "x": 135,
+                "y": 186,
+                "zoom": 0.75
             },
             "filename": "矿场",
-            "version": "v1.5.2"
+            "version": "v1.5.3"
         }
     },
     "点击矿场": {
@@ -49,29 +53,6 @@
             }
         }
     },
-    "领取矿场": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领取"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "确认奖励"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 322,
-                "y": 42
-            }
-        },
-        "post_delay": 2000
-    },
     "确认奖励": {
         "recognition": {
             "type": "OCR",
@@ -92,7 +73,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "返回主界面_矿场"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -101,24 +82,35 @@
             }
         }
     },
-    "返回主界面_矿场": {
+    "领取矿场": {
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "OCR",
             "param": {
-                "template": [
-                    "矮人超市退出.png"
+                "expected": [
+                    "领取"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
+        "next": [
+            "确认奖励"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 942,
+                "x": 322,
                 "y": 42
             }
-        },
-        "post_delay": 2000
+        }
+    },
+    "$__mpe_external_返回主界面开始_矿场": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1230,
+                "y": 107
+            }
+        }
     }
 }
