@@ -4,16 +4,16 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 934,
-                "y": 133,
-                "zoom": 1.32
+                "x": 927,
+                "y": 260,
+                "zoom": 0.67
             },
             "filename": "返回主界面",
             "version": "v1.5.3"
         }
     },
     "返回主界面开始": {
-        "post_delay": 4000,
+        "post_delay": 5000,
         "timeout": 2000,
         "next": [
             "检测是否在主界面"
