@@ -3,16 +3,24 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1779526880764,
+            "lastSyncTime": 1779756240992,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\领取任务奖励.json",
             "savedViewport": {
-                "x": -3046,
-                "y": -9,
-                "zoom": 0.75
+                "x": -2158,
+                "y": -26,
+                "zoom": 0.65
             },
             "filename": "领取任务奖励",
             "version": "v1.5.3"
+        }
+    },
+    "$__mpe_external_返回主界面开始_领取任务奖励": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5312,
+                "y": 731
+            }
         }
     },
     "有没有待领取奖励开始": {
@@ -121,8 +129,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4020,
-                "y": 349
+                "x": 4053,
+                "y": 171
             }
         }
     },
@@ -131,10 +139,13 @@
         "next": [
             "进入任务界面"
         ],
+        "on_error": [
+            "[JumpBack]返回主界面开始"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 3700,
-                "y": 238
+                "x": 3665,
+                "y": 333
             }
         }
     },
@@ -168,14 +179,6 @@
             "position": {
                 "x": 4971,
                 "y": -31
-            }
-        }
-    },
-    "$__mpe_external_返回主界面开始_领取任务奖励": {
-        "$__mpe_code": {
-            "position": {
-                "x": 5344,
-                "y": 682
             }
         }
     }

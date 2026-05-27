@@ -3,27 +3,35 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1779526886434,
+            "lastSyncTime": 1779842602775,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\领取商城免费礼包.json",
             "savedViewport": {
-                "x": -2345,
-                "y": -100,
-                "zoom": 0.65
+                "x": -1947,
+                "y": 112,
+                "zoom": 0.44
             },
             "filename": "领取商城免费礼包",
             "version": "v1.5.3"
         }
     },
-    "在商城寻找奖励图标": {
+    "$__mpe_external_返回主界面开始_领取商城免费礼包": {
+        "$__mpe_code": {
+            "position": {
+                "x": 7535,
+                "y": 1979
+            }
+        }
+    },
+    "在商城前四栏寻找奖励图标": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    235,
-                    60,
-                    52,
-                    437
+                    233,
+                    57,
+                    63,
+                    354
                 ],
                 "template": [
                     "待领取图标.png"
@@ -83,7 +91,7 @@
         "post_delay": 2000,
         "timeout": 3000,
         "next": [
-            "在商城寻找奖励图标"
+            "在商城前四栏寻找奖励图标"
         ],
         "on_error": [
             "未找到奖励图标；下滑屏幕第一次"
@@ -122,8 +130,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5248,
-                "y": -396
+                "x": 5167,
+                "y": -537
             }
         }
     },
@@ -150,7 +158,7 @@
             "寻找分类下的奖励商品"
         ],
         "on_error": [
-            "开始第一次没找到滑动屏幕"
+            "开始购买好运商品"
         ],
         "$__mpe_code": {
             "position": {
@@ -220,6 +228,9 @@
         "post_delay": 2000,
         "next": [
             "购买好运商品"
+        ],
+        "on_error": [
+            "开始第一次没找到滑动屏幕"
         ],
         "$__mpe_code": {
             "position": {
@@ -548,8 +559,12 @@
     },
     "第二次开始购买好运商品": {
         "post_delay": 2000,
+        "timeout": 4000,
         "next": [
             "第二次购买好运商品"
+        ],
+        "on_error": [
+            "未找到奖励图标；下滑屏幕第一次"
         ],
         "$__mpe_code": {
             "position": {
@@ -840,8 +855,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6838,
-                "y": -184
+                "x": 6901,
+                "y": -156
             }
         }
     },
@@ -883,14 +898,6 @@
             "position": {
                 "x": 7859,
                 "y": 947
-            }
-        }
-    },
-    "$__mpe_external_返回主界面开始_领取商城免费礼包": {
-        "$__mpe_code": {
-            "position": {
-                "x": 7535,
-                "y": 1979
             }
         }
     }

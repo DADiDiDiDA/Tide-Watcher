@@ -3,16 +3,24 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1779525572073,
+            "lastSyncTime": 1779842593905,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\刷装备本3-19.json",
             "savedViewport": {
-                "x": -662,
-                "y": -48,
-                "zoom": 0.99
+                "x": 225,
+                "y": 52,
+                "zoom": 0.86
             },
             "filename": "刷装备本3-19",
             "version": "v1.5.3"
+        }
+    },
+    "$__mpe_external_返回主界面开始_刷装备本3-19": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3343,
+                "y": 644
+            }
         }
     },
     "后台战斗是开启的吗": {
@@ -201,16 +209,16 @@
     },
     "进入副本选择": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    1159,
-                    450,
-                    99,
-                    139
+                    1115,
+                    405,
+                    165,
+                    193
                 ],
-                "expected": [
-                    "副本"
+                "template": [
+                    "副本图标.png"
                 ]
             }
         },
@@ -312,14 +320,6 @@
             "position": {
                 "x": 1367,
                 "y": 157
-            }
-        }
-    },
-    "$__mpe_external_返回主界面开始_刷装备本3-19": {
-        "$__mpe_code": {
-            "position": {
-                "x": 3343,
-                "y": 644
             }
         }
     }

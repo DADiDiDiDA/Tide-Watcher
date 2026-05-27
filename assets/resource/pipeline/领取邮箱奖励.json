@@ -1,0 +1,241 @@
+{
+    "$__mpe_config_领取邮箱奖励": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -5757,
+                "y": -347,
+                "zoom": 0.57
+            },
+            "filename": "领取邮箱奖励",
+            "version": "v1.5.3"
+        }
+    },
+    "开始领取邮箱奖励": {
+        "next": [
+            "检测是否有可领取奖励"
+        ],
+        "on_error": [
+            "开始关闭主菜单界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8495,
+                "y": 1129
+            }
+        }
+    },
+    "检测是否有可领取奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    811,
+                    8,
+                    468,
+                    167
+                ],
+                "template": [
+                    "主菜单待领取.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.85
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "有可领取奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8829,
+                "y": 877
+            }
+        }
+    },
+    "有可领取奖励": {
+        "next": [
+            "是邮箱奖励吗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9179,
+                "y": 969
+            }
+        }
+    },
+    "是邮箱奖励吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    919,
+                    17,
+                    260,
+                    573
+                ],
+                "template": [
+                    "邮箱有待领取物品.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始点击全部领取邮箱奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9536,
+                "y": 913
+            }
+        }
+    },
+    "开始点击全部领取邮箱奖励": {
+        "next": [
+            "点击全部领取邮箱奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9865,
+                "y": 937
+            }
+        }
+    },
+    "点击全部领取邮箱奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    80,
+                    547,
+                    157,
+                    65
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始领取奖励-邮箱"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 10147,
+                "y": 913
+            }
+        }
+    },
+    "开始领取奖励-邮箱": {
+        "timeout": 4000,
+        "next": [
+            "领取邮件奖励开始"
+        ],
+        "on_error": [
+            "开始关闭主菜单界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 10490,
+                "y": 938
+            }
+        }
+    },
+    "领取邮件奖励开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    578,
+                    620,
+                    118,
+                    99
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "邮件奖励领取结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 10742,
+                "y": 615
+            }
+        }
+    },
+    "邮件奖励领取结束": {
+        "next": [
+            "开始领取奖励-邮箱"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 11048,
+                "y": 739
+            }
+        }
+    },
+    "开始关闭主菜单界面": {
+        "next": [
+            "点击关闭主菜单按钮"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 10821,
+                "y": 1309
+            }
+        }
+    },
+    "点击关闭主菜单按钮": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1178,
+                    10,
+                    89,
+                    565
+                ],
+                "template": [
+                    "主菜单退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭菜单结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 11138,
+                "y": 1045
+            }
+        }
+    },
+    "关闭菜单结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 11608,
+                "y": 1262
+            }
+        }
+    }
+}

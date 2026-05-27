@@ -3,29 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1779756360855,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 927,
-                "y": 260,
-                "zoom": 0.67
+                "x": 655,
+                "y": 253,
+                "zoom": 0.49
             },
             "filename": "返回主界面",
             "version": "v1.5.3"
-        }
-    },
-    "返回主界面开始": {
-        "post_delay": 5000,
-        "timeout": 2000,
-        "next": [
-            "检测是否在主界面"
-        ],
-        "on_error": [
-            "[JumpBack]连续点击Esc尝试中途退出"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -605,
-                "y": -57
-            }
         }
     },
     "检测是否在主界面": {
@@ -61,6 +48,22 @@
             "position": {
                 "x": 842,
                 "y": 225
+            }
+        }
+    },
+    "返回主界面开始": {
+        "post_delay": 7000,
+        "timeout": 2000,
+        "next": [
+            "检测是否在主界面"
+        ],
+        "on_error": [
+            "[JumpBack]连续点击Esc尝试中途退出"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -605,
+                "y": -57
             }
         }
     },
