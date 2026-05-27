@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -1268,
-                "y": -16,
-                "zoom": 0.86
+                "x": -1447,
+                "y": 5,
+                "zoom": 1
             },
             "filename": "登陆游戏",
             "version": "v1.5.3"
@@ -42,7 +42,7 @@
         }
     },
     "登陆游戏节点结束": {
-        "post_delay": 15000,
+        "post_delay": 25000,
         "$__mpe_code": {
             "position": {
                 "x": 2380,
