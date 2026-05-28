@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -1447,
-                "y": 5,
-                "zoom": 1
+                "x": -1055,
+                "y": 153,
+                "zoom": 0.87
             },
             "filename": "登陆游戏",
             "version": "v1.5.3"
@@ -30,14 +30,15 @@
         "action": {
             "type": "Click"
         },
+        "repeat": 2,
         "timeout": 60000,
         "next": [
             "登陆游戏节点结束"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2107,
-                "y": 175
+                "x": 1962,
+                "y": -6
             }
         }
     },
@@ -45,20 +46,19 @@
         "post_delay": 25000,
         "$__mpe_code": {
             "position": {
-                "x": 2380,
-                "y": 213
+                "x": 2403,
+                "y": 54
             }
         }
     },
     "登陆游戏节点开始": {
-        "post_delay": 55000,
         "next": [
             "进入游戏"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1830,
-                "y": 183
+                "x": 1543,
+                "y": 29
             }
         }
     }

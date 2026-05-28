@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1779525163336,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\分解角色.json",
             "savedViewport": {
-                "x": -3049,
-                "y": 147,
-                "zoom": 0.65
+                "x": -2144,
+                "y": 56,
+                "zoom": 0.66
             },
             "filename": "分解角色",
             "version": "v1.5.3"
@@ -68,8 +65,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4788,
-                "y": 111
+                "x": 4803,
+                "y": 26
             }
         }
     },
@@ -113,8 +110,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5044,
-                "y": 117
+                "x": 5109,
+                "y": 29
             }
         }
     },
@@ -200,8 +197,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4858,
-                "y": -158
+                "x": 4766,
+                "y": -272
             }
         }
     },

@@ -3,16 +3,24 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1779526360051,
+            "lastSyncTime": 1779955733350,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\泰坦废墟任务.json",
             "savedViewport": {
-                "x": -1448,
-                "y": 161,
+                "x": -3142,
+                "y": 151,
                 "zoom": 0.57
             },
             "filename": "泰坦废墟任务",
             "version": "v1.5.3"
+        }
+    },
+    "$__mpe_external_返回主界面开始_泰坦废墟任务": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3799,
+                "y": 566
+            }
         }
     },
     "开始泰坦自动战斗": {
@@ -44,7 +52,8 @@
             }
         }
     },
-    "开始跳过泰坦奖励": {
+    "开始接受泰坦奖励": {
+        "timeout": 5000,
         "next": [
             "跳过泰坦奖励"
         ],
@@ -88,37 +97,12 @@
             "type": "Click"
         },
         "next": [
-            "开始跳过泰坦奖励"
+            "开始接受泰坦奖励"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 3862,
                 "y": 26
-            }
-        }
-    },
-    "无奖励退出泰坦任务": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    2,
-                    3,
-                    110,
-                    58
-                ],
-                "template": [
-                    "矮人超市退出.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 3147,
-                "y": 387
             }
         }
     },
@@ -156,17 +140,18 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3154,
-                "y": 3
+                "x": 3167,
+                "y": -72
             }
         }
     },
     "检测泰坦废墟是否有奖励开始": {
+        "timeout": 4000,
         "next": [
             "检测泰坦废墟是否有奖励"
         ],
         "on_error": [
-            "无奖励退出泰坦任务"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -180,10 +165,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    244,
-                    90,
-                    30,
-                    253
+                    237,
+                    72,
+                    57,
+                    273
                 ],
                 "template": [
                     "待领取图标.png"
@@ -194,7 +179,15 @@
             }
         },
         "action": {
-            "type": "Click"
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -32,
+                    18,
+                    0,
+                    0
+                ]
+            }
         },
         "next": [
             "开始领取泰坦奖励"
@@ -212,7 +205,7 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2320,
+                "x": 2269,
                 "y": 80
             }
         }
@@ -328,7 +321,7 @@
     },
     "跳过泰坦奖励结束": {
         "next": [
-            "开始跳过泰坦奖励"
+            "开始接受泰坦奖励"
         ],
         "$__mpe_code": {
             "position": {
@@ -362,14 +355,6 @@
             "position": {
                 "x": 2587,
                 "y": 128
-            }
-        }
-    },
-    "$__mpe_external_返回主界面开始_泰坦废墟任务": {
-        "$__mpe_code": {
-            "position": {
-                "x": 3978,
-                "y": 554
             }
         }
     }
