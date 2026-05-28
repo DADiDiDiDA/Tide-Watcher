@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1779842602775,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\领取商城免费礼包.json",
             "savedViewport": {
-                "x": -1947,
-                "y": 112,
-                "zoom": 0.44
+                "x": -1526,
+                "y": -225,
+                "zoom": 0.35
             },
             "filename": "领取商城免费礼包",
             "version": "v1.5.3"
@@ -50,8 +47,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4695,
-                "y": 171
+                "x": 4681,
+                "y": 78
             }
         }
     },
@@ -754,8 +751,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4076,
-                "y": 379
+                "x": 4044,
+                "y": 47
             }
         }
     },
@@ -863,12 +860,12 @@
     "领取商城免费礼包开始": {
         "post_delay": 2000,
         "next": [
-            "进入商城界面"
+            "商城有没有待领取奖励检查"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3795,
-                "y": 378
+                "x": 2816,
+                "y": 192
             }
         }
     },
@@ -898,6 +895,49 @@
             "position": {
                 "x": 7859,
                 "y": 947
+            }
+        }
+    },
+    "商城有没有待领取奖励检查": {
+        "timeout": 3000,
+        "next": [
+            "商城有没有待领取奖励"
+        ],
+        "on_error": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3271,
+                "y": 351
+            }
+        }
+    },
+    "商城有没有待领取奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    7,
+                    547,
+                    120,
+                    142
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "next": [
+            "进入商城界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3692,
+                "y": 182
             }
         }
     }

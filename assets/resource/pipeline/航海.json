@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1779526695987,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\航海.json",
             "savedViewport": {
-                "x": 316,
-                "y": 334,
-                "zoom": 0.65
+                "x": 128,
+                "y": 291,
+                "zoom": 0.75
             },
             "filename": "航海",
             "version": "v1.5.3"
@@ -38,7 +35,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "航海结束"
+            "返回主界面开始"
         ],
         "on_error": [
             "航海节点无次数"
@@ -56,7 +53,7 @@
             "是不是航海资源满了_结束"
         ],
         "on_error": [
-            "航海结束"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -70,10 +67,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    353,
-                    180,
-                    372,
-                    196
+                    259,
+                    151,
+                    576,
+                    283
                 ],
                 "template": [
                     "资源已满.png"
@@ -99,10 +96,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    353,
-                    180,
-                    372,
-                    196
+                    259,
+                    151,
+                    576,
+                    283
                 ],
                 "template": [
                     "航海图标.png"
@@ -157,32 +154,6 @@
             }
         }
     },
-    "航海无次数返回主界面": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    5,
-                    2,
-                    79,
-                    50
-                ],
-                "template": [
-                    "矮人超市退出.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": 1545,
-                "y": 174
-            }
-        }
-    },
     "航海检测状态": {
         "post_delay": 2000,
         "timeout": 3000,
@@ -220,6 +191,7 @@
             }
         },
         "repeat": 3,
+        "repeat_delay": 1000,
         "post_delay": 2000,
         "next": [
             "航海检测状态"
@@ -228,15 +200,6 @@
             "position": {
                 "x": -556,
                 "y": -116
-            }
-        }
-    },
-    "航海结束": {
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": 1577,
-                "y": -74
             }
         }
     },
@@ -259,12 +222,12 @@
         },
         "post_delay": 2000,
         "next": [
-            "航海无次数返回主界面"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 906,
-                "y": 324
+                "x": 1348,
+                "y": 266
             }
         }
     },
@@ -310,6 +273,14 @@
             "position": {
                 "x": 1275,
                 "y": -393
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_航海": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2065,
+                "y": -59
             }
         }
     }
