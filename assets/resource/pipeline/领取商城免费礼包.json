@@ -3,10 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780015903258,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\领取商城免费礼包.json",
             "savedViewport": {
-                "x": -1526,
-                "y": -225,
-                "zoom": 0.35
+                "x": -3273,
+                "y": 99,
+                "zoom": 0.67
             },
             "filename": "领取商城免费礼包",
             "version": "v1.5.3"
@@ -17,6 +20,49 @@
             "position": {
                 "x": 7535,
                 "y": 1979
+            }
+        }
+    },
+    "商城有没有待领取奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    7,
+                    547,
+                    120,
+                    142
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "next": [
+            "进入商城界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3692,
+                "y": 182
+            }
+        }
+    },
+    "商城有没有待领取奖励检查": {
+        "timeout": 3000,
+        "next": [
+            "商城有没有待领取奖励"
+        ],
+        "on_error": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3271,
+                "y": 351
             }
         }
     },
@@ -651,7 +697,7 @@
                     45
                 ],
                 "expected": [
-                    "立即领取"
+                    "领取"
                 ]
             }
         },
@@ -895,49 +941,6 @@
             "position": {
                 "x": 7859,
                 "y": 947
-            }
-        }
-    },
-    "商城有没有待领取奖励检查": {
-        "timeout": 3000,
-        "next": [
-            "商城有没有待领取奖励"
-        ],
-        "on_error": [
-            "返回主界面开始"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3271,
-                "y": 351
-            }
-        }
-    },
-    "商城有没有待领取奖励": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    7,
-                    547,
-                    120,
-                    142
-                ],
-                "template": [
-                    "待领取图标.png"
-                ],
-                "threshold": [
-                    0.5
-                ]
-            }
-        },
-        "next": [
-            "进入商城界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3692,
-                "y": 182
             }
         }
     }
