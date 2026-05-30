@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780015903258,
+            "lastSyncTime": 1780104738484,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\领取商城免费礼包.json",
             "savedViewport": {
-                "x": -3273,
-                "y": 99,
-                "zoom": 0.67
+                "x": -4013,
+                "y": 507,
+                "zoom": 0.86
             },
             "filename": "领取商城免费礼包",
             "version": "v1.5.3"
@@ -165,7 +165,15 @@
             }
         },
         "action": {
-            "type": "Click"
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -31,
+                    16,
+                    0,
+                    0
+                ]
+            }
         },
         "post_delay": 2000,
         "next": [
@@ -205,8 +213,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4888,
-                "y": -142
+                "x": 4932,
+                "y": -159
             }
         }
     },

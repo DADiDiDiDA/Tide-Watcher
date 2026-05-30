@@ -3,16 +3,44 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780015578880,
+            "lastSyncTime": 1780104495318,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 628,
-                "y": 169,
-                "zoom": 0.67
+                "x": 160,
+                "y": -417,
+                "zoom": 0.57
             },
             "filename": "返回主界面",
             "version": "v1.5.3"
+        }
+    },
+    "是不是新角色展馆": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    894,
+                    -1,
+                    385,
+                    233
+                ],
+                "template": [
+                    "白色叉号.png"
+                ],
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 723,
+                "y": 359
+            }
         }
     },
     "检测是否在主界面": {
@@ -38,32 +66,69 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 265,
-                "y": -325
+                "x": 718,
+                "y": 76
             }
         }
     },
     "没有广告弹出，任务结束": {
         "$__mpe_code": {
             "position": {
-                "x": 842,
-                "y": 225
+                "x": 1052,
+                "y": 142
+            }
+        }
+    },
+    "点击Esc尝试中途退出等几秒": {
+        "$__mpe_code": {
+            "position": {
+                "x": 952,
+                "y": 1532
+            }
+        }
+    },
+    "点击关闭右侧的主菜单按钮_返回主界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1178,
+                    10,
+                    89,
+                    565
+                ],
+                "template": [
+                    "主菜单退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 689,
+                "y": 632
             }
         }
     },
     "返回主界面开始": {
-        "post_delay": 7000,
-        "timeout": 2000,
+        "post_delay": 4000,
+        "timeout": 4000,
         "next": [
             "检测是否在主界面"
         ],
         "on_error": [
-            "[JumpBack]连续点击Esc尝试中途退出"
+            "[JumpBack]是不是新角色展馆",
+            "[JumpBack]点击关闭右侧的主菜单按钮_返回主界面",
+            "[JumpBack]是不是点击关闭的活动",
+            "[JumpBack]连续点击Esc尝试中途退出",
+            "[JumpBack]是不是按Esc按快了"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -605,
-                "y": -57
+                "x": 252,
+                "y": 370
             }
         }
     },
@@ -72,16 +137,93 @@
             "type": "ClickKey",
             "param": {
                 "key": [
-                    111,
                     4
                 ]
             }
         },
-        "post_delay": 2000,
+        "post_delay": 3000,
+        "next": [
+            "点击Esc尝试中途退出等几秒"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 40,
-                "y": 263
+                "x": 640,
+                "y": 1544
+            }
+        }
+    },
+    "是不是点击关闭的活动": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    563,
+                    612,
+                    146,
+                    105
+                ],
+                "expected": [
+                    "点击"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 695,
+                "y": 938
+            }
+        }
+    },
+    "是不是按Esc按快了": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    394,
+                    282,
+                    442,
+                    87
+                ],
+                "expected": [
+                    "退出游戏"
+                ]
+            }
+        },
+        "next": [
+            "是不是按Esc按快了处理"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 769,
+                "y": 1189
+            }
+        }
+    },
+    "是不是按Esc按快了处理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    400,
+                    392,
+                    159,
+                    68
+                ],
+                "expected": [
+                    "取消"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1171,
+                "y": 1226
             }
         }
     }

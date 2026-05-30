@@ -46,6 +46,11 @@
             "description": "领取邮件奖励，没有会跳过"
         },
         {
+            "name": "🎁 领取签到奖励",
+            "entry": "开始领取签到奖励",
+            "description": "领取每日签到奖励"
+        },
+        {
             "name": "⛏️ 矿场领取",
             "entry": "点击矿场",
             "description": "领取矿场资源"

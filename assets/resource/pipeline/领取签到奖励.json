@@ -1,0 +1,254 @@
+{
+    "$__mpe_config_领取签到奖励": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780104124438,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\领取邮箱奖励.json",
+            "savedViewport": {
+                "x": -6013,
+                "y": -361,
+                "zoom": 0.65
+            },
+            "filename": "领取签到奖励",
+            "version": "v1.5.3"
+        }
+    },
+    "关闭菜单结束-领取签到奖励": {
+        "$__mpe_code": {
+            "position": {
+                "x": 11663,
+                "y": 1394
+            }
+        }
+    },
+    "开始关闭主菜单界面-签到奖励领取": {
+        "next": [
+            "点击关闭主菜单按钮-签到奖励领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 10781,
+                "y": 1209
+            }
+        }
+    },
+    "开始领取签到奖励": {
+        "timeout": 4000,
+        "next": [
+            "检测是否有可领取奖励-签到"
+        ],
+        "on_error": [
+            "关闭菜单结束-领取签到奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8495,
+                "y": 1129
+            }
+        }
+    },
+    "是签到奖励待领取吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    919,
+                    17,
+                    260,
+                    573
+                ],
+                "template": [
+                    "签到奖励待领取.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始第一次关闭签到窗口"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9565,
+                "y": 757
+            }
+        }
+    },
+    "有可领取奖励-签到": {
+        "timeout": 4000,
+        "next": [
+            "是签到奖励待领取吗"
+        ],
+        "on_error": [
+            "开始关闭主菜单界面-签到奖励领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9179,
+                "y": 969
+            }
+        }
+    },
+    "检测是否有可领取奖励-签到": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    811,
+                    8,
+                    468,
+                    167
+                ],
+                "template": [
+                    "主菜单待领取.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.85
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "有可领取奖励-签到"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8829,
+                "y": 877
+            }
+        }
+    },
+    "点击关闭主菜单按钮-签到奖励领取": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1178,
+                    10,
+                    89,
+                    565
+                ],
+                "template": [
+                    "主菜单退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭菜单结束-领取签到奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 11138,
+                "y": 1045
+            }
+        }
+    },
+    "领取签到奖励开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    578,
+                    620,
+                    118,
+                    99
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "第二次关闭签到窗口"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 10409,
+                "y": 707
+            }
+        }
+    },
+    "开始第一次关闭签到窗口": {
+        "next": [
+            "第一次关闭签到窗口"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9825,
+                "y": 757
+            }
+        }
+    },
+    "第一次关闭签到窗口": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1180,
+                    25,
+                    95,
+                    95
+                ],
+                "template": [
+                    "红色X号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领取签到奖励开始"
+        ],
+        "on_error": [
+            "开始关闭主菜单界面-签到奖励领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 10116,
+                "y": 705
+            }
+        }
+    },
+    "第二次关闭签到窗口": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1180,
+                    25,
+                    95,
+                    95
+                ],
+                "template": [
+                    "红色X号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始关闭主菜单界面-签到奖励领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 10745,
+                "y": 786
+            }
+        }
+    }
+}

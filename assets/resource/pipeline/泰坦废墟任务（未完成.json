@@ -3,10 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780104914529,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\泰坦废墟任务.json",
             "savedViewport": {
-                "x": -661,
-                "y": 221,
-                "zoom": 0.57
+                "x": -3753,
+                "y": 187,
+                "zoom": 0.75
             },
             "filename": "泰坦废墟任务",
             "version": "v1.5.3"
@@ -15,8 +18,31 @@
     "$__mpe_external_返回主界面开始_泰坦废墟任务": {
         "$__mpe_code": {
             "position": {
-                "x": 3799,
-                "y": 566
+                "x": 7621,
+                "y": 1157
+            }
+        }
+    },
+    "为做好直接结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2390,
+                "y": 231
+            }
+        }
+    },
+    "开始接受泰坦奖励": {
+        "timeout": 5000,
+        "next": [
+            "跳过泰坦奖励"
+        ],
+        "on_error": [
+            "开始泰坦自动战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4193,
+                "y": 7
             }
         }
     },
@@ -44,23 +70,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4483,
-                "y": 248
-            }
-        }
-    },
-    "开始接受泰坦奖励": {
-        "timeout": 5000,
-        "next": [
-            "跳过泰坦奖励"
-        ],
-        "on_error": [
-            "开始泰坦自动战斗"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4193,
-                "y": 7
+                "x": 4502,
+                "y": 162
             }
         }
     },
@@ -70,7 +81,7 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5809,
+                "x": 6250,
                 "y": 146
             }
         }
@@ -133,7 +144,7 @@
             }
         },
         "next": [
-            "检测那个泰坦关卡有奖励"
+            "检测哪个泰坦关卡有奖励"
         ],
         "$__mpe_code": {
             "position": {
@@ -157,7 +168,7 @@
             }
         }
     },
-    "检测那个泰坦关卡有奖励": {
+    "检测哪个泰坦关卡有奖励": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -191,8 +202,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3517,
-                "y": -29
+                "x": 3526,
+                "y": -88
             }
         }
     },
@@ -264,8 +275,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6130,
-                "y": 57
+                "x": 6499,
+                "y": 178
             }
         }
     },
@@ -275,16 +286,16 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6388,
-                "y": 85
+                "x": 6749,
+                "y": 193
             }
         }
     },
     "泰坦第二次自动战斗结束": {
         "$__mpe_code": {
             "position": {
-                "x": 6685,
-                "y": 85
+                "x": 6925,
+                "y": 2
             }
         }
     },
@@ -352,14 +363,6 @@
             "position": {
                 "x": 2561,
                 "y": -62
-            }
-        }
-    },
-    "为做好直接结束": {
-        "$__mpe_code": {
-            "position": {
-                "x": 2390,
-                "y": 231
             }
         }
     }
