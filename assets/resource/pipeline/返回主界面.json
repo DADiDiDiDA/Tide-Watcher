@@ -3,16 +3,66 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780104495318,
+            "lastSyncTime": 1780157128455,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 160,
-                "y": -417,
+                "x": 316,
+                "y": 16,
                 "zoom": 0.57
             },
             "filename": "返回主界面",
             "version": "v1.5.3"
+        }
+    },
+    "是不是按Esc按快了": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    394,
+                    282,
+                    442,
+                    87
+                ],
+                "expected": [
+                    "退出游戏"
+                ]
+            }
+        },
+        "next": [
+            "是不是按Esc按快了处理"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 769,
+                "y": 1189
+            }
+        }
+    },
+    "是不是按Esc按快了处理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    400,
+                    392,
+                    159,
+                    68
+                ],
+                "expected": [
+                    "取消"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1171,
+                "y": 1226
+            }
         }
     },
     "是不是新角色展馆": {
@@ -20,10 +70,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    894,
-                    -1,
-                    385,
-                    233
+                    895,
+                    5,
+                    380,
+                    220
                 ],
                 "template": [
                     "白色叉号.png"
@@ -40,6 +90,31 @@
             "position": {
                 "x": 723,
                 "y": 359
+            }
+        }
+    },
+    "是不是点击关闭的活动": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    563,
+                    612,
+                    146,
+                    105
+                ],
+                "expected": [
+                    "点击"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 695,
+                "y": 938
             }
         }
     },
@@ -149,81 +224,6 @@
             "position": {
                 "x": 640,
                 "y": 1544
-            }
-        }
-    },
-    "是不是点击关闭的活动": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    563,
-                    612,
-                    146,
-                    105
-                ],
-                "expected": [
-                    "点击"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 695,
-                "y": 938
-            }
-        }
-    },
-    "是不是按Esc按快了": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    394,
-                    282,
-                    442,
-                    87
-                ],
-                "expected": [
-                    "退出游戏"
-                ]
-            }
-        },
-        "next": [
-            "是不是按Esc按快了处理"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 769,
-                "y": 1189
-            }
-        }
-    },
-    "是不是按Esc按快了处理": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    400,
-                    392,
-                    159,
-                    68
-                ],
-                "expected": [
-                    "取消"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 1171,
-                "y": 1226
             }
         }
     }

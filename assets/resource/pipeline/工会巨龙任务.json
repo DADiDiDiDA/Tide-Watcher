@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1779526078840,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\工会巨龙任务.json",
             "savedViewport": {
-                "x": -163,
-                "y": 92,
-                "zoom": 0.75
+                "x": 80,
+                "y": 35,
+                "zoom": 0.66
             },
             "filename": "工会巨龙任务",
             "version": "v1.5.3"
