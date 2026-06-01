@@ -3,19 +3,20 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780157358193,
+            "lastSyncTime": 1780298009637,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\登陆游戏.json",
             "savedViewport": {
-                "x": -1649,
-                "y": 248,
-                "zoom": 0.87
+                "x": -1315,
+                "y": 170,
+                "zoom": 1
             },
             "filename": "登陆游戏",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
     "登陆游戏节点开始": {
+        "timeout": 120000,
         "next": [
             "进入游戏"
         ],
@@ -53,8 +54,6 @@
         "action": {
             "type": "Click"
         },
-        "repeat": 2,
-        "timeout": 60000,
         "next": [
             "登陆游戏节点结束"
         ],

@@ -3,16 +3,24 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1779526876414,
+            "lastSyncTime": 1780311896314,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\通行证奖励领取.json",
             "savedViewport": {
-                "x": -3889,
-                "y": -594,
-                "zoom": 0.75
+                "x": -4200,
+                "y": -207,
+                "zoom": 0.76
             },
             "filename": "通行证奖励领取",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
+        }
+    },
+    "$__mpe_external_返回主界面开始_通行证奖励领取": {
+        "$__mpe_code": {
+            "position": {
+                "x": 6149,
+                "y": 1285
+            }
         }
     },
     "一键领取精灵通行证奖励": {
@@ -202,10 +210,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    410,
-                    170,
-                    201,
-                    47
+                    123,
+                    243,
+                    194,
+                    84
                 ],
                 "template": [
                     "待领取图标.png"
@@ -216,7 +224,15 @@
             }
         },
         "action": {
-            "type": "Click"
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -45,
+                    10,
+                    0,
+                    0
+                ]
+            }
         },
         "post_delay": 2000,
         "next": [
@@ -234,10 +250,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    413,
-                    172,
-                    210,
-                    60
+                    110,
+                    149,
+                    197,
+                    61
                 ],
                 "template": [
                     "待领取图标.png"
@@ -248,7 +264,15 @@
             }
         },
         "action": {
-            "type": "Click"
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -45,
+                    10,
+                    0,
+                    0
+                ]
+            }
         },
         "post_delay": 2000,
         "next": [
@@ -290,10 +314,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    656,
-                    180,
-                    415,
-                    28
+                    101,
+                    305,
+                    212,
+                    214
                 ],
                 "template": [
                     "待领取图标.png"
@@ -304,7 +328,15 @@
             }
         },
         "action": {
-            "type": "Click"
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -45,
+                    10,
+                    0,
+                    0
+                ]
+            }
         },
         "post_delay": 2000,
         "timeout": 3000,
@@ -326,10 +358,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    656,
-                    180,
-                    415,
-                    28
+                    52,
+                    206,
+                    278,
+                    168
                 ],
                 "template": [
                     "待领取图标.png"
@@ -340,7 +372,15 @@
             }
         },
         "action": {
-            "type": "Click"
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -45,
+                    10,
+                    0,
+                    0
+                ]
+            }
         },
         "post_delay": 2000,
         "timeout": 3000,
@@ -478,10 +518,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    72,
-                    94,
-                    144,
-                    155
+                    59,
+                    62,
+                    175,
+                    521
                 ],
                 "expected": [
                     "精灵"
@@ -545,10 +585,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    65,
-                    97,
-                    157,
-                    159
+                    67,
+                    84,
+                    193,
+                    463
                 ],
                 "expected": [
                     "金龙"
@@ -638,16 +678,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6826,
-                "y": -420
-            }
-        }
-    },
-    "$__mpe_external_返回主界面开始_通行证奖励领取": {
-        "$__mpe_code": {
-            "position": {
-                "x": 6149,
-                "y": 1285
+                "x": 6858,
+                "y": -495
             }
         }
     }

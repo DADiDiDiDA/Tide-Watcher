@@ -3,41 +3,49 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780104914529,
+            "lastSyncTime": 1780297548537,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\泰坦废墟任务.json",
             "savedViewport": {
-                "x": -3753,
-                "y": 187,
-                "zoom": 0.75
+                "x": -1245,
+                "y": 83,
+                "zoom": 0.43
             },
             "filename": "泰坦废墟任务",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
     "$__mpe_external_返回主界面开始_泰坦废墟任务": {
         "$__mpe_code": {
             "position": {
-                "x": 7621,
-                "y": 1157
+                "x": 5877,
+                "y": 951
             }
         }
     },
-    "为做好直接结束": {
+    "准备开始泰坦自动战斗": {
+        "timeout": 4000,
+        "next": [
+            "检查剩余挑战次数"
+        ],
+        "on_error": [
+            "开始泰坦自动战斗"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 2390,
-                "y": 231
+                "x": 4218,
+                "y": 265
             }
         }
     },
     "开始接受泰坦奖励": {
+        "post_delay": 4000,
         "timeout": 5000,
         "next": [
             "跳过泰坦奖励"
         ],
         "on_error": [
-            "开始泰坦自动战斗"
+            "准备开始泰坦自动战斗"
         ],
         "$__mpe_code": {
             "position": {
@@ -70,19 +78,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4502,
-                "y": 162
-            }
-        }
-    },
-    "开始选择队伍泰坦第二次战斗": {
-        "next": [
-            "泰坦第二次自动战斗开始"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6250,
-                "y": 146
+                "x": 4775,
+                "y": 100
             }
         }
     },
@@ -104,6 +101,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 4000,
         "next": [
             "开始接受泰坦奖励"
         ],
@@ -111,6 +109,71 @@
             "position": {
                 "x": 3862,
                 "y": 26
+            }
+        }
+    },
+    "检查剩余挑战次数": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1063,
+                    8,
+                    128,
+                    47
+                ],
+                "expected": [
+                    "0"
+                ]
+            }
+        },
+        "timeout": 4000,
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4525,
+                "y": 175
+            }
+        }
+    },
+    "检测哪个泰坦关卡有奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    237,
+                    72,
+                    57,
+                    273
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -32,
+                    18,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "开始领取泰坦奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3526,
+                "y": -88
             }
         }
     },
@@ -168,48 +231,9 @@
             }
         }
     },
-    "检测哪个泰坦关卡有奖励": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    237,
-                    72,
-                    57,
-                    273
-                ],
-                "template": [
-                    "待领取图标.png"
-                ],
-                "threshold": [
-                    0.6
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    -32,
-                    18,
-                    0,
-                    0
-                ]
-            }
-        },
-        "next": [
-            "开始领取泰坦奖励"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3526,
-                "y": -88
-            }
-        }
-    },
     "泰坦废墟任务开始": {
         "next": [
-            "为做好直接结束"
+            "进入泰坦废墟前置界面"
         ],
         "$__mpe_code": {
             "position": {
@@ -219,25 +243,101 @@
         }
     },
     "泰坦第一次战斗确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1015,
+                    571,
+                    222,
+                    131
+                ],
+                "expected": [
+                    "保存结果"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
         "next": [
-            "开始选择队伍泰坦第二次战斗"
+            "泰坦第一次战斗确认二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5478,
-                "y": 111
+                "x": 5758,
+                "y": -17
+            }
+        }
+    },
+    "泰坦第一次战斗确认三次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1059,
+                    618,
+                    113,
+                    79
+                ],
+                "expected": [
+                    "完成"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "准备开始泰坦自动战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6319,
+                "y": -268
+            }
+        }
+    },
+    "泰坦第一次战斗确认二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    680,
+                    405,
+                    162,
+                    102
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 6000,
+        "next": [
+            "泰坦第一次战斗确认三次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6078,
+                "y": -69
             }
         }
     },
     "泰坦第一次等待80s": {
-        "post_delay": 80000,
+        "timeout": -1,
         "next": [
             "泰坦第一次战斗确认"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5162,
-                "y": 191
+                "x": 5445,
+                "y": 82
             }
         }
     },
@@ -264,38 +364,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4830,
-                "y": 131
-            }
-        }
-    },
-    "泰坦第二次自动战斗开始": {
-        "next": [
-            "泰坦第二次自动战斗等待80s"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6499,
-                "y": 178
-            }
-        }
-    },
-    "泰坦第二次自动战斗等待80s": {
-        "next": [
-            "泰坦第二次自动战斗结束"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6749,
-                "y": 193
-            }
-        }
-    },
-    "泰坦第二次自动战斗结束": {
-        "$__mpe_code": {
-            "position": {
-                "x": 6925,
-                "y": 2
+                "x": 5060,
+                "y": 97
             }
         }
     },
@@ -356,13 +426,14 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
         "next": [
             "检测泰坦废墟是否有奖励开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2561,
-                "y": -62
+                "x": 2448,
+                "y": -96
             }
         }
     }

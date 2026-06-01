@@ -3,13 +3,24 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780297711339,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 482,
-                "y": -499,
-                "zoom": 0.56
+                "x": 289,
+                "y": -394,
+                "zoom": 0.49
             },
             "filename": "返回主界面",
             "version": "v1.6.0"
+        }
+    },
+    "$__mpe_external_登陆游戏节点开始_返回主界面": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1104,
+                "y": 1772
+            }
         }
     },
     "是不是按Esc按快了": {
@@ -90,6 +101,34 @@
             }
         }
     },
+    "是不是有更新": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    520,
+                    381,
+                    264,
+                    107
+                ],
+                "expected": [
+                    "更新"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "登陆游戏节点开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 719,
+                "y": 1736
+            }
+        }
+    },
     "是不是点击关闭的活动": {
         "recognition": {
             "type": "OCR",
@@ -143,19 +182,40 @@
             }
         }
     },
+    "检测红色叉号界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1172,
+                    0,
+                    108,
+                    120
+                ],
+                "template": [
+                    "红色X号.png"
+                ],
+                "threshold": [
+                    0.65
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 771,
+                "y": 1393
+            }
+        }
+    },
     "没有广告弹出，任务结束": {
         "$__mpe_code": {
             "position": {
                 "x": 1052,
                 "y": 142
-            }
-        }
-    },
-    "点击Esc尝试中途退出等几秒": {
-        "$__mpe_code": {
-            "position": {
-                "x": 965,
-                "y": 1711
             }
         }
     },
@@ -194,8 +254,9 @@
             "[JumpBack]是不是新角色展馆",
             "[JumpBack]点击关闭右侧的主菜单按钮_返回主界面",
             "[JumpBack]是不是点击关闭的活动",
-            "[JumpBack]开始关闭红色叉号",
             "[JumpBack]是不是按Esc按快了",
+            "[JumpBack]是不是有更新",
+            "[JumpBack]检测红色叉号界面",
             "[JumpBack]连续点击Esc尝试中途退出"
         ],
         "$__mpe_code": {
@@ -214,54 +275,11 @@
                 ]
             }
         },
-        "post_delay": 5000,
-        "next": [
-            "点击Esc尝试中途退出等几秒"
-        ],
+        "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 591,
-                "y": 1696
-            }
-        }
-    },
-    "检测红色叉号界面": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    1172,
-                    0,
-                    108,
-                    120
-                ],
-                "template": [
-                    "红色X号.png"
-                ],
-                "threshold": [
-                    0.65
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": 1052,
-                "y": 1370
-            }
-        }
-    },
-    "开始关闭红色叉号": {
-        "next": [
-            "检测红色叉号界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 727,
-                "y": 1460
+                "x": 761,
+                "y": 2017
             }
         }
     }
