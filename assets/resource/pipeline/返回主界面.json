@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780157128455,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 316,
-                "y": 16,
-                "zoom": 0.57
+                "x": 482,
+                "y": -499,
+                "zoom": 0.56
             },
             "filename": "返回主界面",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
     "是不是按Esc按快了": {
@@ -113,8 +110,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 695,
-                "y": 938
+                "x": 773,
+                "y": 929
             }
         }
     },
@@ -157,8 +154,8 @@
     "点击Esc尝试中途退出等几秒": {
         "$__mpe_code": {
             "position": {
-                "x": 952,
-                "y": 1532
+                "x": 965,
+                "y": 1711
             }
         }
     },
@@ -197,8 +194,9 @@
             "[JumpBack]是不是新角色展馆",
             "[JumpBack]点击关闭右侧的主菜单按钮_返回主界面",
             "[JumpBack]是不是点击关闭的活动",
-            "[JumpBack]连续点击Esc尝试中途退出",
-            "[JumpBack]是不是按Esc按快了"
+            "[JumpBack]开始关闭红色叉号",
+            "[JumpBack]是不是按Esc按快了",
+            "[JumpBack]连续点击Esc尝试中途退出"
         ],
         "$__mpe_code": {
             "position": {
@@ -216,14 +214,54 @@
                 ]
             }
         },
-        "post_delay": 3000,
+        "post_delay": 5000,
         "next": [
             "点击Esc尝试中途退出等几秒"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 640,
-                "y": 1544
+                "x": 591,
+                "y": 1696
+            }
+        }
+    },
+    "检测红色叉号界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1172,
+                    0,
+                    108,
+                    120
+                ],
+                "template": [
+                    "红色X号.png"
+                ],
+                "threshold": [
+                    0.65
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 1052,
+                "y": 1370
+            }
+        }
+    },
+    "开始关闭红色叉号": {
+        "next": [
+            "检测红色叉号界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 727,
+                "y": 1460
             }
         }
     }
