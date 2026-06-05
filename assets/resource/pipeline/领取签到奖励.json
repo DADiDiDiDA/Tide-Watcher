@@ -3,16 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780104124438,
+            "lastSyncTime": 1780495515813,
             "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\领取邮箱奖励.json",
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\领取签到奖励.json",
             "savedViewport": {
-                "x": -6013,
-                "y": -361,
-                "zoom": 0.65
+                "x": -2813,
+                "y": -144,
+                "zoom": 0.37
             },
             "filename": "领取签到奖励",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
     "关闭菜单结束-领取签到奖励": {
@@ -34,12 +34,22 @@
             }
         }
     },
+    "开始第一次关闭签到窗口": {
+        "next": [
+            "第一次关闭签到窗口"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9825,
+                "y": 757
+            }
+        }
+    },
     "开始领取签到奖励": {
+        "post_delay": 4000,
         "timeout": 4000,
         "next": [
-            "检测是否有可领取奖励-签到"
-        ],
-        "on_error": [
+            "检测是否有可领取奖励-签到",
             "关闭菜单结束-领取签到奖励"
         ],
         "$__mpe_code": {
@@ -79,11 +89,10 @@
         }
     },
     "有可领取奖励-签到": {
+        "post_delay": 4000,
         "timeout": 4000,
         "next": [
-            "是签到奖励待领取吗"
-        ],
-        "on_error": [
+            "是签到奖励待领取吗",
             "开始关闭主菜单界面-签到奖励领取"
         ],
         "$__mpe_code": {
@@ -153,45 +162,6 @@
             }
         }
     },
-    "领取签到奖励开始": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    578,
-                    620,
-                    118,
-                    99
-                ],
-                "expected": [
-                    "关闭"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "第二次关闭签到窗口"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 10409,
-                "y": 707
-            }
-        }
-    },
-    "开始第一次关闭签到窗口": {
-        "next": [
-            "第一次关闭签到窗口"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 9825,
-                "y": 757
-            }
-        }
-    },
     "第一次关闭签到窗口": {
         "recognition": {
             "type": "TemplateMatch",
@@ -210,10 +180,9 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 4000,
         "next": [
-            "领取签到奖励开始"
-        ],
-        "on_error": [
+            "领取签到奖励开始",
             "开始关闭主菜单界面-签到奖励领取"
         ],
         "$__mpe_code": {
@@ -248,6 +217,34 @@
             "position": {
                 "x": 10745,
                 "y": 786
+            }
+        }
+    },
+    "领取签到奖励开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    578,
+                    620,
+                    118,
+                    99
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "第二次关闭签到窗口"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 10409,
+                "y": 707
             }
         }
     }

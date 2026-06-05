@@ -3,13 +3,24 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780495523793,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\魔潮扫荡.json",
             "savedViewport": {
-                "x": -5220,
-                "y": -183,
-                "zoom": 1
+                "x": -1861,
+                "y": -46,
+                "zoom": 0.65
             },
             "filename": "魔潮扫荡",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
+        }
+    },
+    "$__mpe_external_返回主界面开始_魔潮扫荡": {
+        "$__mpe_code": {
+            "position": {
+                "x": 6484,
+                "y": 722
+            }
         }
     },
     "有没有扫荡按键": {
@@ -36,18 +47,16 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4828,
-                "y": 101
+                "x": 4865,
+                "y": 98
             }
         }
     },
     "检测魔潮扫荡图标": {
-        "post_delay": 2000,
+        "post_delay": 4000,
         "timeout": 2000,
         "next": [
-            "有没有扫荡按键"
-        ],
-        "on_error": [
+            "有没有扫荡按键",
             "返回主界面开始"
         ],
         "$__mpe_code": {
@@ -244,14 +253,6 @@
             "position": {
                 "x": 3343,
                 "y": 304
-            }
-        }
-    },
-    "$__mpe_external_返回主界面开始_魔潮扫荡": {
-        "$__mpe_code": {
-            "position": {
-                "x": 6484,
-                "y": 722
             }
         }
     }

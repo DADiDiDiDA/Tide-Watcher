@@ -3,16 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1779842593905,
+            "lastSyncTime": 1780530559347,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\刷装备本3-19.json",
             "savedViewport": {
-                "x": 225,
-                "y": 52,
-                "zoom": 0.86
+                "x": -1078,
+                "y": 94,
+                "zoom": 0.65
             },
             "filename": "刷装备本3-19",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
     "$__mpe_external_返回主界面开始_刷装备本3-19": {
@@ -41,11 +41,9 @@
                 ]
             }
         },
-        "post_delay": 2000,
+        "post_delay": 4000,
         "next": [
-            "自动战斗次数最大化"
-        ],
-        "on_error": [
+            "自动战斗次数最大化",
             "返回主界面开始"
         ],
         "$__mpe_code": {
@@ -75,12 +73,13 @@
         },
         "post_delay": 2000,
         "next": [
-            "最小化自动战斗"
+            "最小化自动战斗",
+            "刷本有没有提示体力不足"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2654,
-                "y": -18
+                "x": 2717,
+                "y": -71
             }
         }
     },
@@ -108,18 +107,16 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2906,
-                "y": 219
+                "x": 3135,
+                "y": -93
             }
         }
     },
     "检测后台战斗是不是开着的": {
-        "post_delay": 2000,
+        "post_delay": 4000,
         "timeout": 2000,
         "next": [
-            "后台战斗是开启的吗"
-        ],
-        "on_error": [
+            "后台战斗是开启的吗",
             "返回主界面开始"
         ],
         "$__mpe_code": {
@@ -320,6 +317,31 @@
             "position": {
                 "x": 1367,
                 "y": 157
+            }
+        }
+    },
+    "刷本有没有提示体力不足": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    568,
+                    96,
+                    147,
+                    61
+                ],
+                "expected": [
+                    "恢复"
+                ]
+            }
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3075,
+                "y": 175
             }
         }
     }

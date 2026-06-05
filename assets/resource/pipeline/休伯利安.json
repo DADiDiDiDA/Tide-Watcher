@@ -3,13 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780493739151,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\休伯利安.json",
             "savedViewport": {
-                "x": 610,
-                "y": 466,
-                "zoom": 0.65
+                "x": 314,
+                "y": 411,
+                "zoom": 0.49
             },
             "filename": "休伯利安",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
     "$__mpe_external_返回主界面开始_休伯利安": {
@@ -53,13 +56,44 @@
             }
         }
     },
-    "是否有奖励开始": {
+    "休伯利安滑动屏幕第二次": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    180,
+                    560,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        779,
+                        283,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 1500,
         "post_delay": 2000,
+        "next": [
+            "点击休伯利安开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -666,
+                "y": -337
+            }
+        }
+    },
+    "是否有奖励开始": {
+        "post_delay": 4000,
         "timeout": 3000,
         "next": [
-            "检测是否有奖励"
-        ],
-        "on_error": [
+            "检测是否有奖励",
             "返回主界面开始"
         ],
         "$__mpe_code": {
@@ -93,8 +127,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 977,
-                "y": -434
+                "x": 990,
+                "y": -482
             }
         }
     },
@@ -129,51 +163,16 @@
         }
     },
     "点击休伯利安开始": {
-        "post_delay": 2000,
+        "post_delay": 4000,
         "timeout": 5000,
         "next": [
-            "点击休伯利安"
-        ],
-        "on_error": [
+            "点击休伯利安",
             "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
                 "x": -191,
                 "y": -319
-            }
-        }
-    },
-    "休伯利安滑动屏幕第二次": {
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    180,
-                    560,
-                    1,
-                    1
-                ],
-                "end": [
-                    [
-                        779,
-                        283,
-                        1,
-                        1
-                    ]
-                ]
-            }
-        },
-        "repeat": 3,
-        "repeat_delay": 1500,
-        "post_delay": 2000,
-        "next": [
-            "点击休伯利安开始"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -666,
-                "y": -337
             }
         }
     }

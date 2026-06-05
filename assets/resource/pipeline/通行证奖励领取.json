@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780311896314,
+            "lastSyncTime": 1780495027361,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\通行证奖励领取.json",
             "savedViewport": {
-                "x": -4200,
-                "y": -207,
-                "zoom": 0.76
+                "x": -2250,
+                "y": -43,
+                "zoom": 0.49
             },
             "filename": "通行证奖励领取",
             "version": "v1.6.0"
@@ -82,12 +82,10 @@
         }
     },
     "开始检查有没有精灵通行证奖励": {
-        "post_delay": 2000,
+        "post_delay": 4000,
         "timeout": 3000,
         "next": [
-            "有没有精灵通行证奖励"
-        ],
-        "on_error": [
+            "有没有精灵通行证奖励",
             "返回主界面开始"
         ],
         "$__mpe_code": {
@@ -98,12 +96,10 @@
         }
     },
     "开始检查有没有金龙通行证奖励": {
-        "post_delay": 2000,
+        "post_delay": 4000,
         "timeout": 3000,
         "next": [
-            "有没有金龙通行证奖励"
-        ],
-        "on_error": [
+            "有没有金龙通行证奖励",
             "开始进入精灵通行证"
         ],
         "$__mpe_code": {
@@ -114,12 +110,10 @@
         }
     },
     "开始精灵通行证任务奖励领取": {
-        "post_delay": 2000,
+        "post_delay": 4000,
         "timeout": 3000,
         "next": [
-            "精灵通行证日任务活跃度领取"
-        ],
-        "on_error": [
+            "精灵通行证日任务活跃度领取",
             "开始领取精灵通行证"
         ],
         "$__mpe_code": {
@@ -130,12 +124,10 @@
         }
     },
     "开始进入精灵通行证": {
-        "post_delay": 2000,
+        "post_delay": 4000,
         "timeout": 3000,
         "next": [
-            "进入精灵通行证"
-        ],
-        "on_error": [
+            "进入精灵通行证",
             "返回主界面开始"
         ],
         "$__mpe_code": {
@@ -158,12 +150,10 @@
         }
     },
     "开始进入金龙通行证": {
-        "post_delay": 2000,
+        "post_delay": 4000,
         "timeout": 3000,
         "next": [
-            "进入金龙通行证"
-        ],
-        "on_error": [
+            "进入金龙通行证",
             "返回主界面开始"
         ],
         "$__mpe_code": {
@@ -177,9 +167,7 @@
         "post_delay": 2000,
         "timeout": 3000,
         "next": [
-            "金龙通行证日任务活跃度领取"
-        ],
-        "on_error": [
+            "金龙通行证日任务活跃度领取",
             "进入金龙通行证日任务"
         ],
         "$__mpe_code": {
@@ -190,12 +178,10 @@
         }
     },
     "开始领取精灵通行证": {
-        "post_delay": 2000,
+        "post_delay": 4000,
         "timeout": 3000,
         "next": [
-            "点击精灵通行证有奖励的任务"
-        ],
-        "on_error": [
+            "点击精灵通行证有奖励的任务",
             "开始检查有没有精灵通行证奖励"
         ],
         "$__mpe_code": {
@@ -343,9 +329,6 @@
         "next": [
             "精灵通行证任务领取"
         ],
-        "on_error": [
-            "开始检查有没有精灵通行证奖励"
-        ],
         "$__mpe_code": {
             "position": {
                 "x": 6105,
@@ -386,9 +369,6 @@
         "timeout": 3000,
         "next": [
             "金龙通行证任务领取"
-        ],
-        "on_error": [
-            "开始检查有没有金龙通行证奖励"
         ],
         "$__mpe_code": {
             "position": {
@@ -531,7 +511,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 2000,
+        "post_delay": 4000,
         "next": [
             "开始领取精灵通行证"
         ],
@@ -610,12 +590,10 @@
         }
     },
     "进入金龙通行证日任务": {
-        "post_delay": 2000,
+        "post_delay": 4000,
         "timeout": 3000,
         "next": [
-            "点击金龙通行证有奖励的任务"
-        ],
-        "on_error": [
+            "点击金龙通行证有奖励的任务",
             "开始检查有没有金龙通行证奖励"
         ],
         "$__mpe_code": {
@@ -678,8 +656,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6858,
-                "y": -495
+                "x": 6877,
+                "y": -923
             }
         }
     }

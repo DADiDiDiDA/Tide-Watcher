@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780297548537,
+            "lastSyncTime": 1780494407861,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\泰坦废墟任务.json",
             "savedViewport": {
-                "x": -1245,
-                "y": 83,
-                "zoom": 0.43
+                "x": -2649,
+                "y": 191,
+                "zoom": 0.75
             },
             "filename": "泰坦废墟任务",
             "version": "v1.6.0"
@@ -24,17 +24,16 @@
         }
     },
     "准备开始泰坦自动战斗": {
+        "post_delay": 4000,
         "timeout": 4000,
         "next": [
-            "检查剩余挑战次数"
-        ],
-        "on_error": [
+            "检查剩余挑战次数",
             "开始泰坦自动战斗"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4218,
-                "y": 265
+                "x": 4258,
+                "y": 300
             }
         }
     },
@@ -42,9 +41,7 @@
         "post_delay": 4000,
         "timeout": 5000,
         "next": [
-            "跳过泰坦奖励"
-        ],
-        "on_error": [
+            "跳过泰坦奖励",
             "准备开始泰坦自动战斗"
         ],
         "$__mpe_code": {
@@ -78,8 +75,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4775,
-                "y": 100
+                "x": 4848,
+                "y": 177
             }
         }
     },
@@ -133,8 +130,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4525,
-                "y": 175
+                "x": 4648,
+                "y": 398
             }
         }
     },
@@ -211,17 +208,16 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3167,
-                "y": -72
+                "x": 3180,
+                "y": -147
             }
         }
     },
     "检测泰坦废墟是否有奖励开始": {
+        "post_delay": 4000,
         "timeout": 4000,
         "next": [
-            "检测泰坦废墟是否有奖励"
-        ],
-        "on_error": [
+            "检测泰坦废墟是否有奖励",
             "返回主界面开始"
         ],
         "$__mpe_code": {
@@ -266,8 +262,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5758,
-                "y": -17
+                "x": 5787,
+                "y": 64
             }
         }
     },
@@ -336,8 +332,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5445,
-                "y": 82
+                "x": 5452,
+                "y": 107
             }
         }
     },
@@ -364,8 +360,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5060,
-                "y": 97
+                "x": 5153,
+                "y": 146
             }
         }
     },
