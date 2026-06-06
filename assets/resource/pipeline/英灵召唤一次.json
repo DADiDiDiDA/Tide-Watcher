@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780615660526,
+            "lastSyncTime": 1780706739681,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\英灵召唤一次.json",
             "savedViewport": {
-                "x": -3238,
-                "y": 530,
-                "zoom": 0.57
+                "x": -2975,
+                "y": 1053,
+                "zoom": 0.8
             },
             "filename": "英灵召唤一次",
             "version": "v1.6.1"
@@ -18,8 +18,8 @@
     "$__mpe_external_返回主界面开始_英灵召唤一次": {
         "$__mpe_code": {
             "position": {
-                "x": 9267,
-                "y": 127
+                "x": 4861,
+                "y": -544
             }
         }
     },
@@ -38,8 +38,10 @@
         }
     },
     "尝试检查召唤任务是否已经完成": {
+        "post_delay": 3000,
         "next": [
-            "进入任务界面检查召唤任务"
+            "进入任务界面检查召唤任务",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {

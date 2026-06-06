@@ -81,9 +81,10 @@
             "description": "领取每日休伯利安奖励"
         },
         {
-            "name": "⚔️ 刷装备本3-19",
+            "name": "⚔️ 刷体力",
             "entry": "进入副本选择",
-            "description": "自动刷装备副本3-19"
+            "description": "自动刷副本（可在下方选择要刷的副本类型）",
+            "option": ["副本选择"]
         },
         {
             "name": "🌊 魔潮扫荡",
@@ -150,5 +151,56 @@
             "entry": "泰坦废墟任务开始",
             "description": "自动完成泰坦废墟挑战并领取奖励（没做好，不要用！！！！！！！！！）"
         }
-    ]
+    ],
+
+    "option": {
+        "副本选择": {
+            "type": "select",
+            "label": "副本选择",
+            "description": "选择要自动刷取的副本类型",
+            "default_case": "装备本三",
+            "cases": [
+                {
+                    "name": "装备本一",
+                    "label": "装备本一",
+                    "description": "刷取装备副本一（最上方）",
+                    "pipeline_override": {
+                        "进入副本选择开始": {
+                            "next": ["进入装备本-装备一"]
+                        }
+                    }
+                },
+                {
+                    "name": "装备本二",
+                    "label": "装备本二",
+                    "description": "刷取装备副本二（中间）",
+                    "pipeline_override": {
+                        "进入副本选择开始": {
+                            "next": ["进入装备本-装备二"]
+                        }
+                    }
+                },
+                {
+                    "name": "装备本三",
+                    "label": "装备本三",
+                    "description": "刷取装备副本三（最下方）",
+                    "pipeline_override": {
+                        "进入副本选择开始": {
+                            "next": ["进入装备本-装备三"]
+                        }
+                    }
+                },
+                {
+                    "name": "神器本",
+                    "label": "神器本",
+                    "description": "刷取神器副本",
+                    "pipeline_override": {
+                        "进入副本选择开始": {
+                            "next": ["进入神器本"]
+                        }
+                    }
+                }
+            ]
+        }
+    }
 }

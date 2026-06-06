@@ -1,25 +1,50 @@
 {
-    "$__mpe_config_刷装备本3-19": {
+    "$__mpe_config_刷体力": {
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780530559347,
+            "lastSyncTime": 1780741543229,
             "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\刷装备本3-19.json",
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\刷体力.json",
             "savedViewport": {
-                "x": -1078,
-                "y": 94,
-                "zoom": 0.65
+                "x": -1000,
+                "y": 207,
+                "zoom": 0.57
             },
-            "filename": "刷装备本3-19",
-            "version": "v1.6.0"
+            "filename": "刷体力",
+            "version": "v1.6.1"
         }
     },
-    "$__mpe_external_返回主界面开始_刷装备本3-19": {
+    "$__mpe_external_返回主界面开始_刷体力": {
         "$__mpe_code": {
             "position": {
                 "x": 3343,
                 "y": 644
+            }
+        }
+    },
+    "刷本有没有提示体力不足": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    568,
+                    96,
+                    147,
+                    61
+                ],
+                "expected": [
+                    "恢复"
+                ]
+            }
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3075,
+                "y": 175
             }
         }
     },
@@ -48,8 +73,39 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2054,
-                "y": -219
+                "x": 2063,
+                "y": -307
+            }
+        }
+    },
+    "开始检测哪一关完成了": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    7,
+                    96,
+                    73,
+                    599
+                ],
+                "template": [
+                    "三星通关标志.png"
+                ],
+                "order_by": "Vertical",
+                "index": -1
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "next": [
+            "进入自动战斗配置"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 847,
+                "y": -701
             }
         }
     },
@@ -121,8 +177,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1807,
-                "y": -21
+                "x": 1758,
+                "y": -39
             }
         }
     },
@@ -150,8 +206,39 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2377,
-                "y": -223
+                "x": 2430,
+                "y": -364
+            }
+        }
+    },
+    "装备副本一": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    877,
+                    54,
+                    191,
+                    612
+                ],
+                "expected": [
+                    "前往"
+                ],
+                "order_by": "Vertical",
+                "index": 0
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "开始检测哪一关完成了"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -466,
+                "y": -1570
             }
         }
     },
@@ -160,51 +247,77 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    387,
-                    356,
-                    120,
-                    39
+                    877,
+                    54,
+                    191,
+                    612
                 ],
                 "expected": [
-                    "装备"
-                ]
+                    "前往"
+                ],
+                "order_by": "Vertical",
+                "index": 2
             }
+        },
+        "action": {
+            "type": "Click"
         },
         "post_delay": 2000,
         "next": [
-            "进入副本三"
+            "开始检测哪一关完成了"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 742,
-                "y": 117
+                "x": -427,
+                "y": -980
             }
         }
     },
-    "进入副本三": {
-        "action": {
-            "type": "Click",
+    "装备副本二": {
+        "recognition": {
+            "type": "OCR",
             "param": {
-                "target": [
-                    970,
-                    406,
-                    1,
-                    1
-                ]
+                "roi": [
+                    877,
+                    54,
+                    191,
+                    612
+                ],
+                "expected": [
+                    "前往"
+                ],
+                "order_by": "Vertical",
+                "index": 1
             }
+        },
+        "action": {
+            "type": "Click"
         },
         "post_delay": 2000,
         "next": [
-            "选中关卡19"
+            "开始检测哪一关完成了"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1085,
-                "y": 161
+                "x": -453,
+                "y": -1257
             }
         }
     },
     "进入副本选择": {
+        "post_delay": 3000,
+        "next": [
+            "进入副本选择开始",
+            "[JumpBack]返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1847,
+                "y": -477
+            }
+        }
+    },
+    "进入副本选择开始": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -224,12 +337,44 @@
         },
         "post_delay": 2000,
         "next": [
-            "进入装备本"
+            "进入装备本-装备三",
+            "进入神器本",
+            "进入装备本-装备二",
+            "进入装备本-装备一"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 62,
-                "y": 114
+                "x": -1513,
+                "y": -824
+            }
+        }
+    },
+    "进入神器本": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    657,
+                    243,
+                    207,
+                    74
+                ],
+                "expected": [
+                    "神器"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "开始检测哪一关完成了"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -813,
+                "y": -570
             }
         }
     },
@@ -257,12 +402,41 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1691,
-                "y": 187
+                "x": 1440,
+                "y": -170
             }
         }
     },
-    "进入装备本": {
+    "进入装备本-装备一": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    99,
+                    245,
+                    193,
+                    91
+                ],
+                "expected": [
+                    "装备本"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "装备副本一"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -805,
+                "y": -1536
+            }
+        }
+    },
+    "进入装备本-装备三": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -286,23 +460,23 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 401,
-                "y": 138
+                "x": -778,
+                "y": -952
             }
         }
     },
-    "选中关卡19": {
+    "进入装备本-装备二": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    54,
-                    300,
-                    91,
-                    325
+                    99,
+                    245,
+                    193,
+                    91
                 ],
                 "expected": [
-                    "关卡19"
+                    "装备本"
                 ]
             }
         },
@@ -311,37 +485,12 @@
         },
         "post_delay": 2000,
         "next": [
-            "进入自动战斗配置"
+            "装备副本二"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1367,
-                "y": 157
-            }
-        }
-    },
-    "刷本有没有提示体力不足": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    568,
-                    96,
-                    147,
-                    61
-                ],
-                "expected": [
-                    "恢复"
-                ]
-            }
-        },
-        "next": [
-            "返回主界面开始"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3075,
-                "y": 175
+                "x": -822,
+                "y": -1275
             }
         }
     }
