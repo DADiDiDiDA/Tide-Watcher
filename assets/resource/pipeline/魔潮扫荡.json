@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780495523793,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\魔潮扫荡.json",
             "savedViewport": {
-                "x": -1861,
-                "y": -46,
-                "zoom": 0.65
+                "x": -1620,
+                "y": 55,
+                "zoom": 0.57
             },
             "filename": "魔潮扫荡",
-            "version": "v1.6.0"
+            "version": "v1.6.1"
         }
     },
     "$__mpe_external_返回主界面开始_魔潮扫荡": {
@@ -139,8 +136,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3710,
-                "y": 308
+                "x": 3665,
+                "y": 40
             }
         }
     },
@@ -169,8 +166,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4035,
-                "y": 304
+                "x": 3998,
+                "y": 55
             }
         }
     },
@@ -247,7 +244,8 @@
     "魔潮扫荡开始节点": {
         "post_delay": 2000,
         "next": [
-            "进入挑战要塞魔潮"
+            "进入挑战要塞魔潮",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
