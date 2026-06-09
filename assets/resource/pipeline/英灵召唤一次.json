@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780706739681,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\英灵召唤一次.json",
             "savedViewport": {
-                "x": -2975,
-                "y": 1053,
-                "zoom": 0.8
+                "x": -4556,
+                "y": 235,
+                "zoom": 0.76
             },
             "filename": "英灵召唤一次",
             "version": "v1.6.1"
@@ -18,8 +15,8 @@
     "$__mpe_external_返回主界面开始_英灵召唤一次": {
         "$__mpe_code": {
             "position": {
-                "x": 4861,
-                "y": -544
+                "x": 8249,
+                "y": 276
             }
         }
     },
@@ -138,15 +135,17 @@
         }
     },
     "开始选择英灵召唤": {
+        "post_delay": 3000,
         "timeout": 3000,
         "next": [
             "选择英灵召唤",
-            "无活动召唤-搜索正常召唤"
+            "无活动召唤-搜索正常召唤",
+            "进入英灵召唤界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6892,
-                "y": -166
+                "x": 6880,
+                "y": -112
             }
         }
     },
@@ -520,8 +519,10 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
-            "开始选择英灵召唤"
+            "开始选择英灵召唤",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -548,6 +549,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "进入英灵召唤界面"
         ],

@@ -3,10 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780965954779,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\魔潮扫荡.json",
             "savedViewport": {
-                "x": -1620,
-                "y": 55,
-                "zoom": 0.57
+                "x": -3271,
+                "y": 82,
+                "zoom": 0.75
             },
             "filename": "魔潮扫荡",
             "version": "v1.6.1"
@@ -38,7 +41,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 2000,
+        "post_delay": 3000,
         "next": [
             "确认开始魔潮扫荡"
         ],
@@ -93,7 +96,7 @@
         }
     },
     "确认开始魔潮扫荡": {
-        "post_delay": 2000,
+        "post_delay": 3000,
         "next": [
             "确认不使用剩余次数"
         ],

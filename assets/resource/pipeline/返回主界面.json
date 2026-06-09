@@ -3,16 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780495621220,
+            "lastSyncTime": 1780965990600,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 403,
-                "y": -1053,
-                "zoom": 0.65
+                "x": 394,
+                "y": -1268,
+                "zoom": 0.75
             },
             "filename": "返回主界面",
-            "version": "v1.6.0"
+            "version": "v1.6.1"
         }
     },
     "$__mpe_external_登陆游戏节点开始_返回主界面": {
@@ -66,6 +66,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
         "$__mpe_code": {
             "position": {
                 "x": 652,
@@ -94,6 +95,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
         "$__mpe_code": {
             "position": {
                 "x": 332,
@@ -147,6 +149,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 4000,
         "$__mpe_code": {
             "position": {
                 "x": 332,
@@ -172,6 +175,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 332,
@@ -200,7 +204,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 2000,
+        "post_delay": 3000,
         "$__mpe_code": {
             "position": {
                 "x": 359,
@@ -226,6 +230,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
         "$__mpe_code": {
             "position": {
                 "x": 332,
@@ -234,7 +239,7 @@
         }
     },
     "返回主界面开始": {
-        "post_delay": 7000,
+        "post_delay": 4000,
         "timeout": 4000,
         "next": [
             "[JumpBack]是不是新角色展馆",
