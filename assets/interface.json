@@ -4,8 +4,8 @@
     "description": "Tide-Watcher自动化",
     "contact": "",
     "license": "MIT",
-    "welcome": "注意，最好关闭设置里的保存错误节点照片；而且该游戏广告太多了，最好多执行几次以免失败；注意看任务介绍！！！！！！",
-    "version": "1.2.0",
+    "welcome": "注意看任务介绍！！！！！！",
+    "version": "1.3.0",
     
     "controller": [
         {
