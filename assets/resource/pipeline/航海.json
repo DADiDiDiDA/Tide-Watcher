@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780494495009,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\航海.json",
             "savedViewport": {
-                "x": 364,
-                "y": 238,
-                "zoom": 0.49
+                "x": 363,
+                "y": 256,
+                "zoom": 0.57
             },
             "filename": "航海",
-            "version": "v1.6.0"
+            "version": "v1.6.1"
         }
     },
     "$__mpe_external_返回主界面开始_航海": {
@@ -51,22 +48,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 932,
-                "y": -51
-            }
-        }
-    },
-    "是不是航海奖励待领取": {
-        "post_delay": 4000,
-        "timeout": 4000,
-        "next": [
-            "是不是航海资源满了_结束",
-            "返回主界面开始"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 225,
-                "y": -418
+                "x": 926,
+                "y": -123
             }
         }
     },
@@ -94,8 +77,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 668,
-                "y": -630
+                "x": 39,
+                "y": -685
             }
         }
     },
@@ -167,7 +150,7 @@
         "timeout": 3000,
         "next": [
             "检测航海状态",
-            "是不是航海奖励待领取"
+            "是不是航海资源满了_结束"
         ],
         "$__mpe_code": {
             "position": {
@@ -242,7 +225,8 @@
         "timeout": 3000,
         "next": [
             "启航按钮有次数吗",
-            "航海节点无次数"
+            "航海节点无次数",
+            "航海检测状态"
         ],
         "$__mpe_code": {
             "position": {
@@ -275,8 +259,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1275,
-                "y": -393
+                "x": 326,
+                "y": -598
             }
         }
     }

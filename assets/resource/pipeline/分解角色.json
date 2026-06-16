@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780493958910,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\分解角色.json",
             "savedViewport": {
-                "x": -4828,
-                "y": -386,
-                "zoom": 1.5
+                "x": -2408,
+                "y": -41,
+                "zoom": 0.76
             },
             "filename": "分解角色",
-            "version": "v1.6.0"
+            "version": "v1.6.1"
         }
     },
     "$__mpe_external_返回主界面开始_分解角色": {
@@ -142,7 +139,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "开始选择一星二星三星角色"
+            "开始选择一星二星三星角色",
+            "进入角色界面"
         ],
         "$__mpe_code": {
             "position": {
@@ -175,8 +173,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3948,
-                "y": 337
+                "x": 3920,
+                "y": 366
             }
         }
     },
