@@ -3,16 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780494407861,
+            "lastSyncTime": 1782105311104,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\泰坦废墟任务.json",
             "savedViewport": {
-                "x": -2649,
-                "y": 191,
-                "zoom": 0.75
+                "x": -1917,
+                "y": 17,
+                "zoom": 0.57
             },
             "filename": "泰坦废墟任务",
-            "version": "v1.6.0"
+            "version": "v1.6.2"
         }
     },
     "$__mpe_external_返回主界面开始_泰坦废墟任务": {
@@ -233,8 +233,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2081,
-                "y": -68
+                "x": 1845,
+                "y": -4
             }
         }
     },
