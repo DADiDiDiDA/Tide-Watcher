@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780741543229,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\刷体力.json",
             "savedViewport": {
-                "x": -1000,
-                "y": 207,
+                "x": 1103,
+                "y": 846,
                 "zoom": 0.57
             },
             "filename": "刷体力",
-            "version": "v1.6.1"
+            "version": "v1.7.0"
         }
     },
     "$__mpe_external_返回主界面开始_刷体力": {
@@ -369,7 +366,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "开始检测哪一关完成了"
+            "开始检测哪一关完成了",
+            "进入副本选择开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -427,7 +425,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "装备副本一"
+            "装备副本一",
+            "进入副本选择开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -456,7 +455,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "装备副本三"
+            "装备副本三",
+            "进入副本选择开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -485,7 +485,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "装备副本二"
+            "装备副本二",
+            "进入副本选择开始"
         ],
         "$__mpe_code": {
             "position": {
