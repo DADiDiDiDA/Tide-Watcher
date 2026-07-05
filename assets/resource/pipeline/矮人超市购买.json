@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780706818245,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\矮人超市购买.json",
             "savedViewport": {
-                "x": 219,
-                "y": 119,
-                "zoom": 0.61
+                "x": -420,
+                "y": 304,
+                "zoom": 0.76
             },
             "filename": "矮人超市购买",
-            "version": "v1.6.1"
+            "version": "v1.7.2"
         }
     },
     "$__mpe_external_返回主界面开始_矮人超市购买": {
@@ -47,20 +44,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1532,
+                "x": 1438,
                 "y": -211
-            }
-        }
-    },
-    "一键购买选定物品开始": {
-        "post_delay": 2000,
-        "next": [
-            "一键购买选定物品"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1237,
-                "y": -189
             }
         }
     },
@@ -73,8 +58,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1843,
-                "y": -199
+                "x": 1745,
+                "y": -233
             }
         }
     },
@@ -196,7 +181,7 @@
         },
         "post_delay": 4000,
         "next": [
-            "一键购买选定物品开始",
+            "一键购买选定物品",
             "返回主界面开始"
         ],
         "$__mpe_code": {
