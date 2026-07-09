@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -2408,
-                "y": -41,
-                "zoom": 0.76
+                "x": -457,
+                "y": 106,
+                "zoom": 0.26
             },
             "filename": "分解角色",
-            "version": "v1.6.1"
+            "version": "v1.7.3"
         }
     },
     "$__mpe_external_返回主界面开始_分解角色": {
@@ -23,7 +23,8 @@
     "分解角色开始节点": {
         "post_delay": 2000,
         "next": [
-            "进入角色界面"
+            "进入角色界面",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {

@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780494061292,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\友情点换体力.json",
             "savedViewport": {
-                "x": -1385,
-                "y": 254,
-                "zoom": 0.57
+                "x": -807,
+                "y": 173,
+                "zoom": 0.46
             },
             "filename": "友情点换体力",
-            "version": "v1.6.0"
+            "version": "v1.7.3"
         }
     },
     "$__mpe_external_返回主界面开始_友情点换体力": {
@@ -78,7 +75,7 @@
             }
         }
     },
-    "点击增加体力图标": {
+    "点击增加体力图标开始": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -174,6 +171,18 @@
             "position": {
                 "x": 2803,
                 "y": 48
+            }
+        }
+    },
+    "点击增加体力图标": {
+        "next": [
+            "点击增加体力图标开始",
+            "[JumpBack]返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2031,
+                "y": 386
             }
         }
     }

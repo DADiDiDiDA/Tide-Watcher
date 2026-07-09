@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 305,
-                "y": -1214,
-                "zoom": 0.66
+                "x": 1127,
+                "y": -458,
+                "zoom": 0.76
             },
             "filename": "返回主界面",
-            "version": "v1.6.1"
+            "version": "v1.7.3"
         }
     },
     "$__mpe_external_登陆游戏节点开始_返回主界面": {
@@ -280,6 +280,52 @@
             "position": {
                 "x": 592,
                 "y": 2233
+            }
+        }
+    },
+    "登陆游戏开始": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.gf.cxswz/com.moba.unityplugin.MobaGameQuickSplashActivity"
+            }
+        },
+        "timeout": -1,
+        "next": [
+            "进入游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1295,
+                "y": 1047
+            }
+        }
+    },
+    "进入游戏": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    550,
+                    578,
+                    179,
+                    53
+                ],
+                "expected": [
+                    "点击前往"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -876,
+                "y": 1012
             }
         }
     }
