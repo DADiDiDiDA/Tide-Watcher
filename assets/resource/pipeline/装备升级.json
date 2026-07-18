@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780706542536,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\装备升级.json",
             "savedViewport": {
-                "x": -1558,
-                "y": -101,
-                "zoom": 0.53
+                "x": -6031,
+                "y": -115,
+                "zoom": 0.66
             },
             "filename": "装备升级",
-            "version": "v1.6.1"
+            "version": "v1.7.4"
         }
     },
     "$__mpe_external_返回主界面开始_装备升级": {
@@ -603,8 +600,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 9458,
-                "y": 331
+                "x": 9508,
+                "y": 261
             }
         }
     },
@@ -628,12 +625,13 @@
         },
         "post_delay": 2000,
         "next": [
-            "自动强化选择4级别"
+            "自动强化选择4级别",
+            "[JumpBack]进入自动强化界面_错误处理"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 9718,
-                "y": 331
+                "x": 9826,
+                "y": 226
             }
         }
     },
@@ -815,6 +813,32 @@
             "position": {
                 "x": 8862,
                 "y": 1138
+            }
+        }
+    },
+    "进入自动强化界面_错误处理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    620,
+                    644,
+                    184,
+                    42
+                ],
+                "expected": [
+                    "自动强化"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 10209,
+                "y": 599
             }
         }
     }

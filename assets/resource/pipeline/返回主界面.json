@@ -4,20 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 1127,
-                "y": -458,
-                "zoom": 0.76
+                "x": 153,
+                "y": -646,
+                "zoom": 0.7
             },
             "filename": "返回主界面",
             "version": "v1.7.3"
-        }
-    },
-    "$__mpe_external_登陆游戏节点开始_返回主界面": {
-        "$__mpe_code": {
-            "position": {
-                "x": 652,
-                "y": 1339
-            }
         }
     },
     "是不是按Esc按快了": {
@@ -119,7 +111,7 @@
             "type": "Click"
         },
         "next": [
-            "登陆游戏节点开始"
+            "登陆游戏开始_有更新"
         ],
         "$__mpe_code": {
             "position": {
@@ -326,6 +318,49 @@
             "position": {
                 "x": -876,
                 "y": 1012
+            }
+        }
+    },
+    "登陆游戏开始_有更新": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.gf.cxswz/com.moba.unityplugin.MobaGameQuickSplashActivity"
+            }
+        },
+        "timeout": -1,
+        "next": [
+            "进入游戏_有更新"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 827,
+                "y": 1367
+            }
+        }
+    },
+    "进入游戏_有更新": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    550,
+                    578,
+                    179,
+                    53
+                ],
+                "expected": [
+                    "点击前往"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1246,
+                "y": 1332
             }
         }
     }
