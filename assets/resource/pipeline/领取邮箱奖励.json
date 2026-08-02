@@ -3,16 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780495520255,
+            "lastSyncTime": 1784776199129,
             "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\领取邮箱奖励.json",
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\领取邮箱奖励.json",
             "savedViewport": {
-                "x": -6135,
-                "y": -574,
-                "zoom": 0.75
+                "x": -6558,
+                "y": -491,
+                "zoom": 0.65
             },
             "filename": "领取邮箱奖励",
-            "version": "v1.6.0"
+            "version": "v1.7.4"
         }
     },
     "关闭菜单结束": {
@@ -121,17 +121,17 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    811,
-                    8,
-                    468,
-                    167
+                    871,
+                    5,
+                    403,
+                    141
                 ],
                 "template": [
                     "主菜单待领取.png"
                 ],
                 "green_mask": true,
                 "threshold": [
-                    0.85
+                    0.7
                 ]
             }
         },
