@@ -3,13 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1786616704554,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\刷体力.json",
             "savedViewport": {
-                "x": 1103,
-                "y": 846,
-                "zoom": 0.57
+                "x": -2067,
+                "y": 425,
+                "zoom": 0.99
             },
             "filename": "刷体力",
-            "version": "v1.7.0"
+            "version": "v1.7.6"
         }
     },
     "$__mpe_external_返回主界面开始_刷体力": {
@@ -131,8 +134,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2717,
-                "y": -71
+                "x": 2758,
+                "y": -214
             }
         }
     },
@@ -190,7 +193,8 @@
                     63
                 ],
                 "expected": [
-                    "MAX"
+                    "MAX",
+                    "最大"
                 ]
             }
         },
@@ -309,8 +313,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1847,
-                "y": -477
+                "x": -2127,
+                "y": -346
             }
         }
     },
@@ -341,8 +345,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1513,
-                "y": -824
+                "x": -1573,
+                "y": -847
             }
         }
     },
